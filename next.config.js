@@ -8,7 +8,7 @@ const nextConfig = {
     unoptimized: true,
   },
   env: {
-    NEXT_PUBLIC_BASE_PATH: '/netpointbd',
+    NEXT_PUBLIC_BASE_PATH: '/',
   },
 }
 
