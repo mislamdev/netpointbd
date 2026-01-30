@@ -1,12 +1,13 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function NewspaperPage() {
   const newspapers = [
-    { name: 'Bangladesh Pratidin', url: 'https://www.bd-pratidin.com/', image: '/assets/img/allservices/bangladesh-pratidin.jpg' },
-    { name: 'Nayadiganta', url: 'https://www.dailynayadiganta.com/', image: '/assets/img/allservices/nayadiganta.jpg' },
-    { name: 'The Daily Ittefaq', url: 'https://www.ittefaq.com.bd/', image: '/assets/img/allservices/ittefaq.jpg' },
+    { name: 'Bangladesh Pratidin', url: 'https://www.bd-pratidin.com/', image: getAssetPath('/assets/img/allservices/bangladesh-pratidin.jpg') },
+    { name: 'Nayadiganta', url: 'https://www.dailynayadiganta.com/', image: getAssetPath('/assets/img/allservices/nayadiganta.jpg') },
+    { name: 'The Daily Ittefaq', url: 'https://www.ittefaq.com.bd/', image: getAssetPath('/assets/img/allservices/ittefaq.jpg') },
   ];
 
   return (

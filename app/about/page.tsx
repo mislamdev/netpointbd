@@ -104,7 +104,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="counter-area pt-100 pb-70 jarallax" data-jarallax='{"speed": 0.3}' style={{ backgroundImage: 'url(/assets/img/shape/counter-bg.jpg)' }}>
+      <section className="counter-area pt-100 pb-70 jarallax" data-jarallax='{"speed": 0.3}' style={{ backgroundImage: `url(${getAssetPath('/assets/img/shape/counter-bg.jpg')})` }}>
         <div className="container">
           <div className="counter-max-wide">
             <div className="section-title white-title">

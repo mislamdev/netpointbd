@@ -1,12 +1,13 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function SongZonePage() {
   const musicServices = [
-    { name: 'Hungama', url: 'https://www.hungama.com/albums/lang/bengali/popular/', image: '/assets/img/allservices/hungama.jpg' },
-    { name: 'Wynk Music', url: 'https://wynk.in/music/playlist/bengali-top-20/bb_1519291110573', image: '/assets/img/allservices/Wynk-music.jpg' },
-    { name: 'SoundCloud', url: 'https://soundcloud.com/', image: '/assets/img/allservices/soundcloud.jpg' },
+    { name: 'Hungama', url: 'https://www.hungama.com/albums/lang/bengali/popular/', image: getAssetPath('/assets/img/allservices/hungama.jpg') },
+    { name: 'Wynk Music', url: 'https://wynk.in/music/playlist/bengali-top-20/bb_1519291110573', image: getAssetPath('/assets/img/allservices/Wynk-music.jpg') },
+    { name: 'SoundCloud', url: 'https://soundcloud.com/', image: getAssetPath('/assets/img/allservices/soundcloud.jpg') },
   ];
 
   return (

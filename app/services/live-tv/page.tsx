@@ -1,19 +1,20 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function LiveTVPage() {
   const liveTVServices = [
-    { name: 'NeT-PoinT Live', url: 'http://97.74.103.44/jwtv1/index.php', image: '/assets/img/allservices/sports.jpg' },
-    { name: 'Live Tv Sports', url: 'http://172.17.50.112', image: '/assets/img/allservices/net-point-bd.jpg' },
-    { name: 'LIVE Mazic TV', url: 'http://moviemazic.xyz/live-tv.html', image: '/assets/img/allservices/bdip-live.jpg' },
-    { name: 'iptvidn', url: 'http://tv.bdiptv.net', image: '/assets/img/services/live-tv.jpg' },
-    { name: 'bdiptv', url: 'http://tv.bdiptv.net/', image: '/assets/img/allservices/net-point-bd.jpg' },
-    { name: 'iptvidn2', url: 'http://iptvidn.com/', image: '/assets/img/services/live-tv.jpg' },
-    { name: 'Sports TV', url: 'http://172.27.27.200/home/index/pyv67elzqk3', image: '/assets/img/allservices/sports.jpg' },
-    { name: 'Just Live Sports', url: 'http://tv.bdiptv.net', image: '/assets/img/allservices/live-tv.jpg' },
-    { name: 'Live TV', url: 'http://iptvidn.com', image: '/assets/img/allservices/live-tv.jpg' },
-    { name: 'Just Live Sports', url: 'http://172.17.50.112/', image: '/assets/img/allservices/bdip-live.jpg' },
+    { name: 'NeT-PoinT Live', url: 'http://97.74.103.44/jwtv1/index.php', image: getAssetPath('/assets/img/allservices/sports.jpg') },
+    { name: 'Live Tv Sports', url: 'http://172.17.50.112', image: getAssetPath('/assets/img/allservices/net-point-bd.jpg') },
+    { name: 'LIVE Mazic TV', url: 'http://moviemazic.xyz/live-tv.html', image: getAssetPath('/assets/img/allservices/bdip-live.jpg') },
+    { name: 'iptvidn', url: 'http://tv.bdiptv.net', image: getAssetPath('/assets/img/services/live-tv.jpg') },
+    { name: 'bdiptv', url: 'http://tv.bdiptv.net/', image: getAssetPath('/assets/img/allservices/net-point-bd.jpg') },
+    { name: 'iptvidn2', url: 'http://iptvidn.com/', image: getAssetPath('/assets/img/services/live-tv.jpg') },
+    { name: 'Sports TV', url: 'http://172.27.27.200/home/index/pyv67elzqk3', image: getAssetPath('/assets/img/allservices/sports.jpg') },
+    { name: 'Just Live Sports', url: 'http://tv.bdiptv.net', image: getAssetPath('/assets/img/allservices/live-tv.jpg') },
+    { name: 'Live TV', url: 'http://iptvidn.com', image: getAssetPath('/assets/img/allservices/live-tv.jpg') },
+    { name: 'Just Live Sports', url: 'http://172.17.50.112/', image: getAssetPath('/assets/img/allservices/bdip-live.jpg') },
   ];
 
   return (

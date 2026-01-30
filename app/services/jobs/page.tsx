@@ -1,12 +1,13 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function JobsPage() {
   const jobSites = [
-    { name: 'Bdjobs.com', url: 'https://www.bdjobs.com/', image: '/assets/img/allservices/bdjobs.jpg' },
-    { name: 'BD Jobs Today', url: 'https://bdjobstoday.com/', image: '/assets/img/allservices/bdjobs-today.jpg' },
-    { name: 'BD Govt Jobs', url: 'https://bdgovtjobs.com/', image: '/assets/img/allservices/bd-govt-jobs.jpg' },
+    { name: 'Bdjobs.com', url: 'https://www.bdjobs.com/', image: getAssetPath('/assets/img/allservices/bdjobs.jpg') },
+    { name: 'BD Jobs Today', url: 'https://bdjobstoday.com/', image: getAssetPath('/assets/img/allservices/bdjobs-today.jpg') },
+    { name: 'BD Govt Jobs', url: 'https://bdgovtjobs.com/', image: getAssetPath('/assets/img/allservices/bd-govt-jobs.jpg') },
   ];
 
   return (

@@ -1,12 +1,13 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function GovWebsitesPage() {
   const govWebsites = [
-    { name: 'ভূমি মন্ত্রণালয়', url: 'https://land.gov.bd/', image: '/assets/img/allservices/bdland.jpg' },
-    { name: 'খাদ্য অধিদপ্তর', url: 'https://www.dgfood.gov.bd/', image: '/assets/img/allservices/bd-govt-jobs.jpg' },
-    { name: 'বাংলাদেশ জাতীয় তথ্য বাতায়ন', url: 'https://bangladesh.gov.bd/index.php', image: '/assets/img/allservices/bd.jpg' },
+    { name: 'ভূমি মন্ত্রণালয়', url: 'https://land.gov.bd/', image: getAssetPath('/assets/img/allservices/bdland.jpg') },
+    { name: 'খাদ্য অধিদপ্তর', url: 'https://www.dgfood.gov.bd/', image: getAssetPath('/assets/img/allservices/bd-govt-jobs.jpg') },
+    { name: 'বাংলাদেশ জাতীয় তথ্য বাতায়ন', url: 'https://bangladesh.gov.bd/index.php', image: getAssetPath('/assets/img/allservices/bd.jpg') },
   ];
 
   return (

@@ -1,12 +1,13 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function OnlineShopPointPage() {
   const shoppingSites = [
-    { name: 'Daraz', url: 'https://www.daraz.com.bd/', image: '/assets/img/allservices/daraz.jpg' },
-    { name: 'AjkerDeal', url: 'https://www.ajkerdeal.com/', image: '/assets/img/allservices/ajkerdeal.jpg' },
-    { name: 'Caldal', url: 'https://chaldal.com/', image: '/assets/img/allservices/caldal.jpg' },
+    { name: 'Daraz', url: 'https://www.daraz.com.bd/', image: getAssetPath('/assets/img/allservices/daraz.jpg') },
+    { name: 'AjkerDeal', url: 'https://www.ajkerdeal.com/', image: getAssetPath('/assets/img/allservices/ajkerdeal.jpg') },
+    { name: 'Caldal', url: 'https://chaldal.com/', image: getAssetPath('/assets/img/allservices/caldal.jpg') },
   ];
 
   return (
