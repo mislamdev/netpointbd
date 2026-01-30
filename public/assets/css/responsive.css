@@ -1126,7 +1126,7 @@
         font-size: 18px;
     }
     .approach-img {
-        background-image: url(../assets/img/approach-img.jpg);
+        background-image: url(../img/approach-img.jpg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1153,7 +1153,7 @@
         margin-left: 0;
     }
     .protect-img {
-        background-image: url(../assets/img/protect-img.jpg);
+        background-image: url(../img/protect-img.jpg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1183,7 +1183,7 @@
         margin-left: 0;
     }
     .about-img {
-        background-image: url(../assets/img/net-pointbd.jpg);
+        background-image: url(../img/net-pointbd.jpg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;

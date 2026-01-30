@@ -1150,19 +1150,19 @@ Banner Area Style
 }
 
 .banner-area.bg-1 {
-    background: transparent url(../assets/img/banner/banner-bg-1.jpg) left top no-repeat;
+    background: transparent url(../img/banner/banner-bg-1.jpg) left top no-repeat;
 }
 
 .banner-area.bg-2 {
-    background-image: url(../assets/img/banner/banner-bg-2.jpg);
+    background-image: url(../img/banner/banner-bg-2.jpg);
 }
 
 .banner-area.bg-4 {
-    background-image: url(../assets/img/banner/banner-bg-4.jpg);
+    background-image: url(../img/banner/banner-bg-4.jpg);
 }
 
 .banner-area.bg-5 {
-    background-image: url(../assets/img/banner/banner-bg-5.jpg);
+    background-image: url(../img/banner/banner-bg-5.jpg);
 }
 
 .banner-area.banner-area-two {
@@ -1918,7 +1918,7 @@ Solution Area Style
 }
 
 .solution-img {
-    background-image: url(../assets/img/solution-img.png);
+    background-image: url(../img/solution-img.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1945,7 +1945,7 @@ Solution Area Style
 Get In Touch Area Style
 ======================================================*/
 .get-in-touch-area {
-    background-image: url(../assets/img/get-in-touch-bg.jpg);
+    background-image: url(../img/get-in-touch-bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -3681,7 +3681,7 @@ Coming Soon Area CSS
     height: 100vh;
     position: relative;
     z-index: 1;
-    background-image: url(../assets/img/coming-soon-bg.jpg);
+    background-image: url(../img/coming-soon-bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

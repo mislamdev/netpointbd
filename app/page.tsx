@@ -65,7 +65,7 @@ export default function HomePage() {
           display: block !important;
         }
       `}</style>
-      <section className="banner-wrapper jarallax" data-jarallax='{"speed": 0.3}' style={{ backgroundImage: 'url(/assets/img/slider-img.jpg)' }}>
+      <section className="banner-wrapper jarallax" data-jarallax='{"speed": 0.3}' style={{ backgroundImage: `url(${getAssetPath('/assets/img/slider-img.jpg')})` }}>
         <div className="banner-slider owl-theme owl-carousel">
           <div className="item">
             <div className="banner-wrapper banner-area banner-area-four jarallax">
@@ -182,7 +182,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <div className="testimonials-area py-4" style={{ backgroundImage: 'url(/assets/img/bg/notice-bg.jpg)' }}>
+        <div className="testimonials-area py-4" style={{ backgroundImage: `url(${getAssetPath('/assets/img/bg/notice-bg.jpg')})` }}>
           <div className="container">
             <div className="row">
               <div className="col-md-12">
