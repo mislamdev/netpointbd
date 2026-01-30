@@ -108,7 +108,8 @@ export default function Scripts() {
           }
 
           // Tab functionality
-          $('.tabs li').on('click', function() {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          $('.tabs li').on('click', function(this: any) {
             var tab = $(this).data('tab');
             $('.tabs li').removeClass('current');
             $('.tabs_item').removeClass('current');
@@ -136,13 +137,15 @@ export default function Scripts() {
           handleScroll(); // Call once on load
 
           // Go to top click
-          $('.go-top').on('click', function(e) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          $('.go-top').on('click', function(e: any) {
             e.preventDefault();
             $('html, body').animate({ scrollTop: 0 }, 1000);
           });
 
           // Smooth scroll
-          $('a[href*="#"]:not([href="#"])').on('click', function(e) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          $('a[href*="#"]:not([href="#"])').on('click', function(this: any, e: any) {
             if (this.hash !== '') {
               const hash = this.hash;
               const target = $(hash);
@@ -156,8 +159,10 @@ export default function Scripts() {
           });
 
           // Initialize WOW.js
-          if (typeof window.WOW !== 'undefined') {
-            new window.WOW({
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          if (typeof (window as any).WOW !== 'undefined') {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            new (window as any).WOW({
               boxClass: 'wow',
               animateClass: 'animated',
               offset: 0,
@@ -168,7 +173,8 @@ export default function Scripts() {
 
           // Odometer
           if (typeof $.fn.appear !== 'undefined') {
-            $('.odometer').appear(function() {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            $('.odometer').appear(function(this: any) {
               var odo = $(this);
               var countNumber = odo.attr('data-count');
               if (countNumber) {

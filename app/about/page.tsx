@@ -18,7 +18,8 @@ export default function AboutPage() {
 
         // Initialize odometer
         if (typeof $.fn.appear !== 'undefined') {
-          $('.odometer').appear(function(this: HTMLElement) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          $('.odometer').appear(function(this: any) {
             var odo = $(this);
             var countNumber = odo.attr('data-count');
             if (countNumber) {

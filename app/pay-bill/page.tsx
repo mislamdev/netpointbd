@@ -15,7 +15,8 @@ export default function PayBillPage() {
         
         console.log('Initializing payment tabs...', tabsList.length, 'tabs found');
         
-        tabsList.off('click').on('click', function() {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        tabsList.off('click').on('click', function(this: any) {
           const index = $(this).index();
           console.log('Payment tab clicked, index:', index);
           

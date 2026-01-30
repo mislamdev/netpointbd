@@ -23,7 +23,8 @@ export default function PackagesPage() {
           tabsList.off('click');
           
           // Initialize tabs with index-based switching
-          tabsList.on('click', function() {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          tabsList.on('click', function(this: any) {
             const index = $(this).index();
             console.log('Tab clicked, index:', index);
             

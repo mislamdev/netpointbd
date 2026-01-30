@@ -38,7 +38,8 @@ export default function HomePage() {
         }
 
         // Initialize tabs for About section
-        $('.about-content .tabs li').off('click').on('click', function() {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        $('.about-content .tabs li').off('click').on('click', function(this: any) {
           const index = $(this).index();
           console.log('About tab clicked, index:', index);
           
