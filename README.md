@@ -11,6 +11,17 @@ This is a Next.js conversion of the Net Point BD HTML website. The website provi
 - ✅ SEO optimized
 - ✅ Fast page transitions
 
+## 📚 Documentation
+
+Comprehensive documentation is available in the **[docs](./docs/)** folder:
+- [INDEX.md](./docs/INDEX.md) - Complete index of all documentation organized by category
+- Setup guides, deployment instructions, fix documentation, and more
+
+Quick links:
+- **[Quick Start Guide](./docs/QUICKSTART.md)** - Get started quickly
+- **[Deployment Guide](./docs/DEPLOYMENT.md)** - Deploy to production
+- **[GitHub Pages Setup](./docs/GITHUB_PAGES_FIX.md)** - Deploy to GitHub Pages
+
 ## Project Structure
 
 ```
@@ -34,6 +45,9 @@ netpoint-nextjs/
 │   └── Scripts.tsx         # JavaScript libraries loader
 ├── public/
 │   └── assets/             # All static assets (CSS, JS, images, fonts)
+├── docs/                   # 📚 Documentation folder
+│   ├── INDEX.md            # Documentation index
+│   └── *.md                # All project documentation
 ├── next.config.js
 ├── tsconfig.json
 └── package.json

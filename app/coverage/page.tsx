@@ -1,7 +1,7 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
-import { getAssetPath } from '@/lib/utils';
+import ContactCallToAction from '@/components/ContactCallToAction';
 
 export default function CoveragePage() {
   const areas = [
@@ -62,32 +62,7 @@ export default function CoveragePage() {
         </div>
       </section>
 
-      <section className="subscribe-area ptb-100 bg-color">
-        <div className="container">
-          <div className="subscribe-bg">
-            <div className="row align-items-center justify-content-between">
-              <div className="col-lg-8 col-sm-7">
-                <div className="subscribe-content">
-                  <img src={getAssetPath("/assets/img/icon/call-for-witi.svg")} alt="Image" width="80" height="60" loading="lazy" />
-                  <h2>Looking for Internet Connection in Bogura?</h2>
-                  <p>Contact with Net Point BD now and get your superfast internet connection within a day. We are here to assist you for your internet connection.</p>
-                </div>
-              </div>
-
-              <div className="col-lg-4 col-sm-4">
-                <div className="text-center text-lg-end">
-                  <a href="/contact" className="default-btn" style={{ marginRight: '10px' }}>
-                    <span>Contact Now</span>
-                  </a>
-                  <a href="tel:+8809649315047" className="default-btn">
-                    <span>Call Now</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactCallToAction />
     </>
   );
 }

@@ -4,47 +4,59 @@ import { getAssetPath } from '@/lib/utils';
 
 export default function Header() {
   return (
-    <header className="header-area">
-      {/* Pay Online Button for Mobile & Tablet */}
-      <div className="pay-online-button d-md-none">
-        <p style={{ color: 'white', fontSize: '14px', marginTop: '5px', textAlign: 'center' }}>
-          Pay Online in Seconds, Fast and Easy!
-        </p>
-        <div style={{ textAlign: 'center' }}>
-          <a
-            href="https://netpointbd.ispdigital.cloud/BillPayment/Index"
-            target="_blank"
-            className="default-btn"
-            style={{
-              backgroundColor: 'transparent',
-              color: 'black',
-              padding: '10px 5px',
-              borderRadius: '0px',
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-              transition: 'background 0.3s ease',
-              display: 'inline-flex',
-              alignItems: 'center'
-            }}
-          >
-            <img
-              src={getAssetPath('/assets/img/bKash_Nagad.png')}
-              alt="Pay Now"
-              width="60"
-              height="30"
-              title="Pay Bill"
-              loading="lazy"
-              style={{ borderRadius: '4px' }}
-            />
-            <span style={{ fontSize: '18px', backgroundColor: '#b8182b', color: 'white', padding: '5px', marginBottom: '0px' }}>
-              <strong>Pay Online</strong>
-            </span>
-          </a>
+    <>
+      {/* Pay Online Button for Mobile & Tablet - Outside header to avoid design conflicts */}
+      <div className="pay-online-button d-xl-none">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6 d-none d-md-block">
+              {/* Contact info for tablet - WhatsApp only */}
+              <ul className="header-left-content" style={{ marginBottom: 0, paddingLeft: 0, listStyle: 'none' }}>
+                <li style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                  <i className="bx bx-phone-call" style={{ color: 'white', flexShrink: 0 }}></i>
+                  <a href="tel:+8801923315047" style={{ color: 'white', textDecoration: 'none', marginLeft: '5px', whiteSpace: 'nowrap', flexShrink: 0 }}>01923315047 (WhatsApp)</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-12 col-md-6" style={{ textAlign: 'center' }}>
+              <a
+                href="https://netpointbd.ispdigital.cloud/BillPayment/Index"
+                target="_blank"
+                className="default-btn"
+                style={{
+                  backgroundColor: 'transparent',
+                  color: 'black',
+                  padding: '10px 5px',
+                  borderRadius: '0px',
+                  textDecoration: 'none',
+                  fontWeight: 'bold',
+                  boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                  transition: 'background 0.3s ease',
+                  display: 'inline-flex',
+                  alignItems: 'center'
+                }}
+              >
+                <img
+                  src={getAssetPath('/assets/img/bKash_Nagad.png')}
+                  alt="Pay Now"
+                  width="60"
+                  height="30"
+                  title="Pay Bill"
+                  loading="lazy"
+                  style={{ borderRadius: '4px' }}
+                />
+                <span style={{ fontSize: '18px', backgroundColor: '#b8182b', color: 'white', padding: '5px', marginBottom: '0px' }}>
+                  <strong>Pay Online</strong>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="top-header top-header-four d-xl-block d-none">
+      <header className="header-area">
+
+        <div className="top-header top-header-four d-xl-block d-none">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-9 col-sm-6">
@@ -282,5 +294,6 @@ export default function Header() {
         </div>
       </div>
     </header>
+    </>
   );
 }
