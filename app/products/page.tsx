@@ -1,6 +1,7 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function ProductsPage() {
   const products = [
@@ -8,14 +9,14 @@ export default function ProductsPage() {
       id: 0,
       name: 'Xiaomi Mi 4C',
       price: '1,700',
-      image: '/assets/img/product/router.jpg',
+      image: getAssetPath('/assets/img/product/router.jpg'),
       alt: 'Xiaomi Mi 4C',
     },
     {
       id: 1,
       name: 'Wireless Security Camera',
       price: '1,800',
-      image: '/assets/img/product/product-1.jpg',
+      image: getAssetPath('/assets/img/product/product-1.jpg'),
       alt: 'Wireless Security Camera',
     },
   ];
@@ -71,7 +72,7 @@ export default function ProductsPage() {
             <div className="row align-items-center justify-content-between">
               <div className="col-lg-8 col-sm-7">
                 <div className="subscribe-content">
-                  <img src="/assets/img/icon/call-for-witi.svg" alt="Image" width="80" height="60" loading="lazy" />
+                  <img src={getAssetPath('/assets/img/icon/call-for-witi.svg')} alt="Image" width="80" height="60" loading="lazy" />
                   <h2>Looking for Internet Connection in Bogura?</h2>
                   <p>Contact with Net Point BD now and get your superfast internet connection within a day. We are here to assist you for your internet connection.</p>
                 </div>

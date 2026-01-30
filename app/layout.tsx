@@ -19,21 +19,21 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/favicon.png" />
-        
+        <link rel="shortcut icon" type="image/x-icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/img/logo/favicon.png`} />
+
         {/* CSS Links */}
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css" />
-        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css" />
-        <link rel="stylesheet" href="/assets/css/animate.min.css" />
-        <link rel="stylesheet" href="/assets/css/boxicons.min.css" />
-        <link rel="stylesheet" href="/assets/css/magnific-popup.min.css" />
-        <link rel="stylesheet" href="/assets/css/flaticon.css" />
-        <link rel="stylesheet" href="/assets/css/meanmenu.min.css" />
-        <link rel="stylesheet" href="/assets/css/nice-select.min.css" />
-        <link rel="stylesheet" href="/assets/css/odometer.min.css" />
-        <link rel="stylesheet" href="/assets/css/style.css" />
-        <link rel="stylesheet" href="/assets/css/responsive.css" />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/bootstrap.min.css`} />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/owl.theme.default.min.css`} />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/owl.carousel.min.css`} />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/animate.min.css`} />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/boxicons.min.css`} />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/magnific-popup.min.css`} />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/flaticon.css`} />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/meanmenu.min.css`} />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/nice-select.min.css`} />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/odometer.min.css`} />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/style.css`} />
+        <link rel="stylesheet" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/css/responsive.css`} />
       </head>
       <body>
         <Header />

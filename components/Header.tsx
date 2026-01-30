@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/utils';
 
 export default function Header() {
   return (
@@ -28,7 +29,7 @@ export default function Header() {
             }}
           >
             <img
-              src="/assets/img/bKash_Nagad.png"
+              src={getAssetPath('/assets/img/bKash_Nagad.png')}
               alt="Pay Now"
               width="60"
               height="30"
@@ -86,7 +87,7 @@ export default function Header() {
                     }}
                   >
                     <img
-                      src="/assets/img/bKash_Nagad.png"
+                      src={getAssetPath('/assets/img/bKash_Nagad.png')}
                       alt="Pay Now"
                       width="60"
                       height="30"
@@ -101,7 +102,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link href="/about#btrc">
-                    <img src="/assets/img/btrc-logo.png" alt="BTRC Logo" width="30" height="30" title="BTRC Logo" loading="lazy" />
+                    <img src={getAssetPath('/assets/img/btrc-logo.png')} alt="BTRC Logo" width="30" height="30" title="BTRC Logo" loading="lazy" />
                   </Link>
                 </li>
                 <li>
@@ -122,7 +123,7 @@ export default function Header() {
             <Link href="/" className="logo">
               <img
                 className="img-fluid"
-                src="/assets/img/logo/Net-Point-BD-Logo.svg"
+                src={getAssetPath('/assets/img/logo/Net-Point-BD-Logo.svg')}
                 alt="Net Point BD Logo"
                 width="200"
                 height="50"
@@ -139,7 +140,7 @@ export default function Header() {
               <Link className="navbar-brand" href="/">
                 <img
                   className="img-fluid"
-                  src="/assets/img/logo/Net-Point-BD-Logo.svg"
+                  src={getAssetPath('/assets/img/logo/Net-Point-BD-Logo.svg')}
                   alt="Net Point BD Logo"
                   width="200"
                   height="50"

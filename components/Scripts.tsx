@@ -209,52 +209,52 @@ export default function Scripts() {
   return (
     <>
       <Script 
-        src="/assets/js/jquery.min.js" 
-        strategy="beforeInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/jquery.min.js`}
+        strategy="beforeInteractive"
       />
       <Script 
-        src="/assets/js/bootstrap.bundle.min.js" 
-        strategy="afterInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/bootstrap.bundle.min.js`}
+        strategy="afterInteractive"
       />
       <Script 
-        src="/assets/js/meanmenu.min.js" 
-        strategy="afterInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/meanmenu.min.js`}
+        strategy="afterInteractive"
       />
       <Script 
-        src="/assets/js/owl.carousel.min.js" 
-        strategy="afterInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/owl.carousel.min.js`}
+        strategy="afterInteractive"
       />
       <Script 
-        src="/assets/js/nice-select.min.js" 
-        strategy="afterInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/nice-select.min.js`}
+        strategy="afterInteractive"
       />
       <Script 
-        src="/assets/js/magnific-popup.min.js" 
-        strategy="afterInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/magnific-popup.min.js`}
+        strategy="afterInteractive"
       />
       <Script 
-        src="/assets/js/jarallax.min.js" 
-        strategy="afterInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/jarallax.min.js`}
+        strategy="afterInteractive"
       />
       <Script 
-        src="/assets/js/appear.min.js" 
-        strategy="afterInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/appear.min.js`}
+        strategy="afterInteractive"
       />
       <Script 
-        src="/assets/js/odometer.min.js" 
-        strategy="afterInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/odometer.min.js`}
+        strategy="afterInteractive"
       />
       <Script 
-        src="/assets/js/smoothscroll.min.js" 
-        strategy="afterInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/smoothscroll.min.js`}
+        strategy="afterInteractive"
       />
       <Script 
-        src="/assets/js/ajaxchimp.min.js" 
-        strategy="afterInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/ajaxchimp.min.js`}
+        strategy="afterInteractive"
       />
       <Script 
-        src="/assets/js/wow.min.js" 
-        strategy="afterInteractive" 
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/assets/js/wow.min.js`}
+        strategy="afterInteractive"
       />
     </>
   );

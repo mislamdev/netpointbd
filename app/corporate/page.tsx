@@ -1,6 +1,7 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function CorporatePage() {
   return (
@@ -44,10 +45,10 @@ export default function CorporatePage() {
                     <span>Contact Us for Custom Quote</span>
                   </a>
                   <div className="pricing-shape">
-                    <img src="/assets/img/shape/pricing-shape.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape.png")} alt="Image" loading="lazy" />
                   </div>
                   <div className="pricing-shape-2">
-                    <img src="/assets/img/shape/pricing-shape-2.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape-2.png")} alt="Image" loading="lazy" />
                   </div>
                 </div>
               </div>

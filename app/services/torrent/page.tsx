@@ -1,6 +1,7 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function TorrentPage() {
   return (
@@ -17,7 +18,7 @@ export default function TorrentPage() {
               <div className="single-services">
                 <div className="services-img">
                   <a target="_blank" href="https://www.utorrent.com/" rel="noopener noreferrer">
-                    <img src="/assets/img/allservices/torrent.jpg" alt="Torrent" width="290" height="345" title="Torrent" loading="lazy" />
+                    <img src={getAssetPath('/assets/img/allservices/torrent.jpg')} alt="Torrent" width="290" height="345" title="Torrent" loading="lazy" />
                   </a>
                 </div>
 

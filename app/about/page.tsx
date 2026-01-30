@@ -2,6 +2,7 @@
 
 import PageTitle from '@/components/PageTitle';
 import { useEffect } from 'react';
+import { getAssetPath } from '@/lib/utils';
 
 export default function AboutPage() {
   useEffect(() => {
@@ -44,7 +45,7 @@ export default function AboutPage() {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="about-img">
-                <img src="/assets/img/about-net-point-bd-logo.jpg" alt="Net Point BD logo" width="600" height="370" title="Net Point BD logo" loading="lazy" />
+                <img src={getAssetPath("/assets/img/about-net-point-bd-logo.jpg")} alt="Net Point BD logo" width="600" height="370" title="Net Point BD logo" loading="lazy" />
               </div>
             </div>
             <div className="col-lg-6">
@@ -88,7 +89,7 @@ export default function AboutPage() {
           <div className="row align-items-center flex-row-reverse g-5">
             <div className="col-lg-6">
               <div className="about-img">
-                <img src="/assets/img/btrc.jpg" alt="BTRC Approval" width="600" height="370" title="BTRC Approval of Net Point BD" loading="lazy" />
+                <img src={getAssetPath("/assets/img/btrc.jpg")} alt="BTRC Approval" width="600" height="370" title="BTRC Approval of Net Point BD" loading="lazy" />
               </div>
             </div>
             <div className="col-lg-6">
@@ -170,7 +171,7 @@ export default function AboutPage() {
             <div className="row align-items-center justify-content-between">
               <div className="col-lg-8 col-sm-7">
                 <div className="subscribe-content">
-                  <img src="/assets/img/icon/call-for-witi.svg" alt="Image" width="80" height="60" loading="lazy" />
+                  <img src={getAssetPath("/assets/img/icon/call-for-witi.svg")} alt="Image" width="80" height="60" loading="lazy" />
                   <h2>Looking for Internet Connection in Bogura?</h2>
                   <p>Contact with Net Point BD now and get your superfast internet connection within a day. We are here to assist you for your internet connection.</p>
                 </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { getAssetPath } from '@/lib/utils';
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
                 <Link href="/" className="logo">
                   <img
                     className="img-fluid"
-                    src="/assets/img/logo/Net-Point-BD-Logo.svg"
+                    src={getAssetPath('/assets/img/logo/Net-Point-BD-Logo.svg')}
                     alt="Logo"
                     width="300"
                     height="50"

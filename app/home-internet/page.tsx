@@ -1,6 +1,7 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function HomeInternetPage() {
   return (
@@ -35,10 +36,10 @@ export default function HomeInternetPage() {
                     <span>Order Now</span>
                   </a>
                   <div className="pricing-shape">
-                    <img src="/assets/img/shape/pricing-shape.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape.png")} alt="Image" loading="lazy" />
                   </div>
                   <div className="pricing-shape-2">
-                    <img src="/assets/img/shape/pricing-shape-2.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape-2.png")} alt="Image" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -66,10 +67,10 @@ export default function HomeInternetPage() {
                     <span>Order Now</span>
                   </a>
                   <div className="pricing-shape">
-                    <img src="/assets/img/shape/pricing-shape.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape.png")} alt="Image" loading="lazy" />
                   </div>
                   <div className="pricing-shape-2">
-                    <img src="/assets/img/shape/pricing-shape-2.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape-2.png")} alt="Image" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -98,10 +99,10 @@ export default function HomeInternetPage() {
                     <span>Order Now</span>
                   </a>
                   <div className="pricing-shape">
-                    <img src="/assets/img/shape/pricing-shape.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape.png")} alt="Image" loading="lazy" />
                   </div>
                   <div className="pricing-shape-2">
-                    <img src="/assets/img/shape/pricing-shape-2.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape-2.png")} alt="Image" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -130,10 +131,10 @@ export default function HomeInternetPage() {
                     <span>Order Now</span>
                   </a>
                   <div className="pricing-shape">
-                    <img src="/assets/img/shape/pricing-shape.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape.png")} alt="Image" loading="lazy" />
                   </div>
                   <div className="pricing-shape-2">
-                    <img src="/assets/img/shape/pricing-shape-2.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape-2.png")} alt="Image" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -162,10 +163,10 @@ export default function HomeInternetPage() {
                     <span>Order Now</span>
                   </a>
                   <div className="pricing-shape">
-                    <img src="/assets/img/shape/pricing-shape.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape.png")} alt="Image" loading="lazy" />
                   </div>
                   <div className="pricing-shape-2">
-                    <img src="/assets/img/shape/pricing-shape-2.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape-2.png")} alt="Image" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -194,10 +195,10 @@ export default function HomeInternetPage() {
                     <span>Order Now</span>
                   </a>
                   <div className="pricing-shape">
-                    <img src="/assets/img/shape/pricing-shape.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape.png")} alt="Image" loading="lazy" />
                   </div>
                   <div className="pricing-shape-2">
-                    <img src="/assets/img/shape/pricing-shape-2.png" alt="Image" loading="lazy" />
+                    <img src={getAssetPath("/assets/img/shape/pricing-shape-2.png")} alt="Image" loading="lazy" />
                   </div>
                 </div>
               </div>

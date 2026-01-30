@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { getAssetPath } from '@/lib/utils';
 
 export default function HomePage() {
   useEffect(() => {
@@ -196,7 +197,7 @@ export default function HomePage() {
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="about-img">
-                  <img src="/assets/img/net-pointbd.jpg" alt="Wifi Cable Connect with PC" width="605" height="540" title="Wifi Cable Connect with PC" loading="lazy" />
+                  <img src={getAssetPath('/assets/img/net-pointbd.jpg')} alt="Wifi Cable Connect with PC" width="605" height="540" title="Wifi Cable Connect with PC" loading="lazy" />
                 </div>
               </div>
               <div className="col-lg-6">
@@ -265,7 +266,7 @@ export default function HomePage() {
               <div className="row align-items-center justify-content-between">
                 <div className="col-lg-8 col-sm-7">
                   <div className="subscribe-content">
-                    <img src="/assets/img/icon/call-for-witi.svg" alt="Image" width="80" height="60" loading="lazy" />
+                    <img src={getAssetPath('/assets/img/icon/call-for-witi.svg')} alt="Image" width="80" height="60" loading="lazy" />
                     <h2>Looking for Internet Connection in Bogura?</h2>
                     <p>Contact with Net Point BD now and get your superfast internet connection within a day. We are here to assist you for your internet connection.</p>
                   </div>

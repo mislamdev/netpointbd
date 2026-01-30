@@ -1,6 +1,7 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 import { useEffect } from 'react';
 
 export default function PayBillPage() {
@@ -93,7 +94,7 @@ export default function PayBillPage() {
                   </div>
                   <div className="col-lg-5 text-center">
                     <div className="bg-white p-4 rounded" style={{ borderRadius: '15px' }}>
-                      <img src="/assets/img/bKash_Nagad.png" alt="Payment Methods" className="mb-3" style={{ maxWidth: '180px', margin: '0 auto' }} />
+                      <img src={getAssetPath('/assets/img/bKash_Nagad.png')} alt="Payment Methods" className="mb-3" style={{ maxWidth: '180px', margin: '0 auto' }} />
                       <h4 className="mb-3" style={{ color: '#000219' }}>Choose Your Method</h4>
                       <a 
                         href="https://netpointbd.ispdigital.cloud/BillPayment/Index" 
@@ -139,13 +140,13 @@ export default function PayBillPage() {
                   </ul>
                   <div className="tab_content">
                     <div className="tabs_item current">
-                      <img src="/assets/img/billpay/bkash-payment.jpeg" alt="bKash Payment" width="900" height="900" title="bKash Payment" loading="lazy" style={{ maxWidth: '100%', height: 'auto' }} />
+                      <img src={getAssetPath('/assets/img/billpay/bkash-payment.jpeg')} alt="bKash Payment" width="900" height="900" title="bKash Payment" loading="lazy" style={{ maxWidth: '100%', height: 'auto' }} />
                     </div>
                     <div className="tabs_item">
-                      <img src="/assets/img/billpay/nagad-payment.jpeg" alt="Nagad Payment" width="900" height="900" title="Nagad Payment" loading="lazy" style={{ maxWidth: '100%', height: 'auto' }} />
+                      <img src={getAssetPath('/assets/img/billpay/nagad-payment.jpeg')} alt="Nagad Payment" width="900" height="900" title="Nagad Payment" loading="lazy" style={{ maxWidth: '100%', height: 'auto' }} />
                     </div>
                     <div className="tabs_item">
-                      <img src="/assets/img/billpay/rocket.jpg" alt="Rocket Payment" width="900" height="900" title="Rocket Payment" loading="lazy" style={{ maxWidth: '100%', height: 'auto' }} />
+                      <img src={getAssetPath('/assets/img/billpay/rocket.jpg')} alt="Rocket Payment" width="900" height="900" title="Rocket Payment" loading="lazy" style={{ maxWidth: '100%', height: 'auto' }} />
                     </div>
                     <div className="tabs_item">
                       <section className="bank-area pt-4">
@@ -154,7 +155,7 @@ export default function PayBillPage() {
                             <div className="col-lg-3 col-sm-6">
                               <div className="single-challenges overly-one">
                                 <div className="overly-two">
-                                  <img src="/assets/img/billpay/brac-bank.png" alt="Brac Bank" width="100" height="100" title="Brac Bank" loading="lazy" />
+                                  <img src={getAssetPath('/assets/img/billpay/brac-bank.png')} alt="Brac Bank" width="100" height="100" title="Brac Bank" loading="lazy" />
                                   <h3>Brac Bank</h3>
                                   <ul>
                                     <li><strong>A/C Name:</strong> NeT-PoinT BD</li>
@@ -167,7 +168,7 @@ export default function PayBillPage() {
                             <div className="col-lg-3 col-sm-6">
                               <div className="single-challenges overly-one">
                                 <div className="overly-two">
-                                  <img src="/assets/img/billpay/dbbl-bank.png" alt="DBBL Bank" width="100" height="100" title="DBBL Bank" loading="lazy" />
+                                  <img src={getAssetPath('/assets/img/billpay/dbbl-bank.png')} alt="DBBL Bank" width="100" height="100" title="DBBL Bank" loading="lazy" />
                                   <h3>DBBL Bank</h3>
                                   <ul>
                                     <li><strong>A/C Name:</strong> NeT-PoinT BD</li>
@@ -180,7 +181,7 @@ export default function PayBillPage() {
                             <div className="col-lg-3 col-sm-6">
                               <div className="single-challenges overly-one">
                                 <div className="overly-two">
-                                  <img src="/assets/img/billpay/standard-bank.png" alt="Standard Bank Ltd" width="100" height="100" title="Standard Bank Ltd" loading="lazy" />
+                                  <img src={getAssetPath('/assets/img/billpay/standard-bank.png')} alt="Standard Bank Ltd" width="100" height="100" title="Standard Bank Ltd" loading="lazy" />
                                   <h3>Standard Bank Ltd</h3>
                                   <ul>
                                     <li><strong>A/C Name:</strong> NET POINT BD</li>
@@ -193,7 +194,7 @@ export default function PayBillPage() {
                             <div className="col-lg-3 col-sm-6">
                               <div className="single-challenges overly-one">
                                 <div className="overly-two">
-                                  <img src="/assets/img/billpay/pubali-bank.png" alt="Pubali Bank" width="100" height="100" title="Pubali Bank" loading="lazy" />
+                                  <img src={getAssetPath('/assets/img/billpay/pubali-bank.png')} alt="Pubali Bank" width="100" height="100" title="Pubali Bank" loading="lazy" />
                                   <h3>Pubali Bank</h3>
                                   <ul>
                                     <li><strong>A/C Name:</strong> NET POINT BD</li>
