@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export',
   basePath: '/netpointbd',
-  assetPrefix: '/netpointbd/',
+  assetPrefix: '/',
   images: {
     unoptimized: true,
   },
