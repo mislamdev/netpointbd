@@ -2,13 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/netpointbd',
+  basePath: '/',
   assetPrefix: '/',
   images: {
     unoptimized: true,
   },
   env: {
-    NEXT_PUBLIC_BASE_PATH: '/',
+    NEXT_PUBLIC_BASE_PATH: '/netpointbd',
   },
 }
 
