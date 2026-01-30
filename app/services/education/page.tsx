@@ -1,12 +1,13 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function EducationPage() {
   const educationSites = [
-    { name: 'Ministry of Education', url: 'http://www.educationboardresults.gov.bd/', image: '/assets/img/allservices/bd_logo.jpg' },
-    { name: 'EDPDU', url: 'https://edpdu.com/bn', image: '/assets/img/allservices/edpdu.jpg' },
-    { name: 'a2i', url: 'https://a2i.gov.bd/', image: '/assets/img/allservices/a2i.jpg' },
+    { name: 'Ministry of Education', url: 'http://www.educationboardresults.gov.bd/', image: getAssetPath('/assets/img/allservices/bd_logo.jpg') },
+    { name: 'EDPDU', url: 'https://edpdu.com/bn', image: getAssetPath('/assets/img/allservices/edpdu.jpg') },
+    { name: 'a2i', url: 'https://a2i.gov.bd/', image: getAssetPath('/assets/img/allservices/a2i.jpg') },
   ];
 
   return (

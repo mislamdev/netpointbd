@@ -1,12 +1,13 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function BanglaLibraryPage() {
   const libraries = [
-    { name: 'Bangla Library', url: 'https://www.ebanglalibrary.com/', image: '/assets/img/allservices/banglalibrary.jpg' },
-    { name: 'BDeBooks', url: 'https://bdebooks.com/', image: '/assets/img/allservices/BDeBooks.jpg' },
-    { name: 'Bangla Library । বাংলা বই', url: 'https://www.banglalibrary.com/', image: '/assets/img/allservices/bangla-library.jpg' },
+    { name: 'Bangla Library', url: 'https://www.ebanglalibrary.com/', image: getAssetPath('/assets/img/allservices/banglalibrary.jpg') },
+    { name: 'BDeBooks', url: 'https://bdebooks.com/', image: getAssetPath('/assets/img/allservices/BDeBooks.jpg') },
+    { name: 'Bangla Library । বাংলা বই', url: 'https://www.banglalibrary.com/', image: getAssetPath('/assets/img/allservices/bangla-library.jpg') },
   ];
 
   return (

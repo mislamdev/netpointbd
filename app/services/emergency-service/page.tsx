@@ -1,12 +1,13 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function EmergencyServicePage() {
   const emergencyServices = [
-    { name: 'ফায়ার সার্ভিস ও সিভিল ডিফেন্স', url: 'https://fireservice.gov.bd/', image: '/assets/img/allservices/fire-service.jpg' },
-    { name: 'Ambulance BD 24', url: 'https://ambulancebd24.com/', image: '/assets/img/allservices/ambulance-BD-24.jpg' },
-    { name: 'Dnet', url: 'https://dnet.org.bd/', image: '/assets/img/allservices/dnet.jpg' },
+    { name: 'ফায়ার সার্ভিস ও সিভিল ডিফেন্স', url: 'https://fireservice.gov.bd/', image: getAssetPath('/assets/img/allservices/fire-service.jpg') },
+    { name: 'Ambulance BD 24', url: 'https://ambulancebd24.com/', image: getAssetPath('/assets/img/allservices/ambulance-BD-24.jpg') },
+    { name: 'Dnet', url: 'https://dnet.org.bd/', image: getAssetPath('/assets/img/allservices/dnet.jpg') },
   ];
 
   return (

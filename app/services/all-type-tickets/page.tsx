@@ -1,11 +1,12 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function AllTypeTicketsPage() {
   const ticketSites = [
-    { name: 'Biman Bangladesh Airlines Ltd', url: 'https://www.biman-airlines.com/', image: '/assets/img/allservices/biman-ticket.jpg' },
-    { name: 'বাংলাদেশ রেলওয়ে', url: 'https://railway.portal.gov.bd/', image: '/assets/img/allservices/railway-ticket.jpg' },
+    { name: 'Biman Bangladesh Airlines Ltd', url: 'https://www.biman-airlines.com/', image: getAssetPath('/assets/img/allservices/biman-ticket.jpg') },
+    { name: 'বাংলাদেশ রেলওয়ে', url: 'https://railway.portal.gov.bd/', image: getAssetPath('/assets/img/allservices/railway-ticket.jpg') },
   ];
 
   return (

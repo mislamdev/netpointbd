@@ -1,13 +1,14 @@
 'use client';
 
 import PageTitle from '@/components/PageTitle';
+import { getAssetPath } from '@/lib/utils';
 
 export default function CourtOfLawPage() {
   const legalSites = [
-    { name: 'Find My Advocate', url: 'https://www.findmyadvocatebd.com/', image: '/assets/img/allservices/find-my-advocate.jpg' },
-    { name: 'ই-কার্যতালিকা -সকল মামলার তথ্য এক তালিকায়', url: 'https://causelist.judiciary.gov.bd/', image: '/assets/img/allservices/ecourt.jpg' },
-    { name: 'বাংলাদেশ ফরম', url: 'http://forms.mygov.bd/', image: '/assets/img/allservices/bdform.jpg' },
-    { name: 'অধস্তন আদালতের রায়', url: 'http://decision.bdcourts.gov.bd/', image: '/assets/img/allservices/bdcourts.jpg' },
+    { name: 'Find My Advocate', url: 'https://www.findmyadvocatebd.com/', image: getAssetPath('/assets/img/allservices/find-my-advocate.jpg') },
+    { name: 'ই-কার্যতালিকা -সকল মামলার তথ্য এক তালিকায়', url: 'https://causelist.judiciary.gov.bd/', image: getAssetPath('/assets/img/allservices/ecourt.jpg') },
+    { name: 'বাংলাদেশ ফরম', url: 'http://forms.mygov.bd/', image: getAssetPath('/assets/img/allservices/bdform.jpg') },
+    { name: 'অধস্তন আদালতের রায়', url: 'http://decision.bdcourts.gov.bd/', image: getAssetPath('/assets/img/allservices/bdcourts.jpg') },
   ];
 
   return (
