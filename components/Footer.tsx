@@ -156,13 +156,13 @@ export default function Footer() {
 
       {/* Start WhatsApp Area */}
       <div className="whatsapp">
-        <a
-          target="_blank"
-          href="https://m.me/236254273596322"
-          className="btn-messenger-pulse btn-messenger-pulse-border"
-        >
-          <i className="bx bxl-messenger"></i>
-        </a>
+        {/*<a*/}
+        {/*  target="_blank"*/}
+        {/*  href="https://m.me/236254273596322"*/}
+        {/*  className="btn-messenger-pulse btn-messenger-pulse-border"*/}
+        {/*>*/}
+        {/*  <i className="bx bxl-messenger"></i>*/}
+        {/*</a>*/}
         <a
           target="_blank"
           href="https://api.whatsapp.com/send?phone=8801923315047"
