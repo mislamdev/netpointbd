@@ -122,7 +122,7 @@ export default function PackagesPage() {
                           <h2><sup>৳</sup>500<sub>/Month</sub></h2>
                         </div>
                         <ul>
-                          <li>Internet Speed: Up to 10 Mbps</li>
+                          <li>Internet Speed: Up to 20 Mbps</li>
                           <li>Traffic: Unlimited</li>
                           <li>Cable: Optical Fiber Connection</li>
                           <li>Online Payment System</li>
@@ -153,7 +153,7 @@ export default function PackagesPage() {
                           <h2><sup>৳</sup>600<sub>/Month</sub></h2>
                         </div>
                         <ul>
-                          <li>Internet Speed: Up to 20 Mbps</li>
+                          <li>Internet Speed: Up to 30 Mbps</li>
                           <li>Traffic: Unlimited</li>
                           <li>Cable: Optical Fiber Connection</li>
                           <li>Online Payment System</li>
@@ -280,7 +280,7 @@ export default function PackagesPage() {
                           <h2><sup>৳</sup>1,200<sub>/Month</sub></h2>
                         </div>
                         <ul>
-                          <li>Internet Speed: Up to 80 Mbps</li>
+                          <li>Internet Speed: Up to 90 Mbps</li>
                           <li>Data Traffic: Unlimited</li>
                           <li>BDIX, FTP & CDN: Unlimited High-Speed</li>
                           <li>Streaming: 4K YouTube & Facebook</li>

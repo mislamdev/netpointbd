@@ -18,38 +18,38 @@ export default function Header() {
                 </li>
               </ul>
             </div>
-            <div className="col-12 col-md-6" style={{ textAlign: 'center' }}>
-              <a
-                href="https://netpointbd.ispdigital.cloud/BillPayment/Index"
-                target="_blank"
-                className="default-btn"
-                style={{
-                  backgroundColor: 'transparent',
-                  color: 'black',
-                  padding: '10px 5px',
-                  borderRadius: '0px',
-                  textDecoration: 'none',
-                  fontWeight: 'bold',
-                  boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-                  transition: 'background 0.3s ease',
-                  display: 'inline-flex',
-                  alignItems: 'center'
-                }}
-              >
-                <img
-                  src={getAssetPath('/assets/img/bKash_Nagad.png')}
-                  alt="Pay Now"
-                  width="60"
-                  height="30"
-                  title="Pay Bill"
-                  loading="lazy"
-                  style={{ borderRadius: '4px' }}
-                />
-                <span style={{ fontSize: '18px', backgroundColor: '#b8182b', color: 'white', padding: '5px', marginBottom: '0px' }}>
-                  <strong>Pay Online</strong>
-                </span>
-              </a>
-            </div>
+            {/*<div className="col-12 col-md-6" style={{ textAlign: 'center' }}>*/}
+            {/*  <a*/}
+            {/*    href="https://netpointbd.ispdigital.cloud/BillPayment/Index"*/}
+            {/*    target="_blank"*/}
+            {/*    className="default-btn"*/}
+            {/*    style={{*/}
+            {/*      backgroundColor: 'transparent',*/}
+            {/*      color: 'black',*/}
+            {/*      padding: '10px 5px',*/}
+            {/*      borderRadius: '0px',*/}
+            {/*      textDecoration: 'none',*/}
+            {/*      fontWeight: 'bold',*/}
+            {/*      boxShadow: '0 4px 6px rgba(0,0,0,0.1)',*/}
+            {/*      transition: 'background 0.3s ease',*/}
+            {/*      display: 'inline-flex',*/}
+            {/*      alignItems: 'center'*/}
+            {/*    }}*/}
+            {/*  >*/}
+            {/*    <img*/}
+            {/*      src={getAssetPath('/assets/img/bKash_Nagad.png')}*/}
+            {/*      alt="Pay Now"*/}
+            {/*      width="60"*/}
+            {/*      height="30"*/}
+            {/*      title="Pay Bill"*/}
+            {/*      loading="lazy"*/}
+            {/*      style={{ borderRadius: '4px' }}*/}
+            {/*    />*/}
+            {/*    <span style={{ fontSize: '18px', backgroundColor: '#b8182b', color: 'white', padding: '5px', marginBottom: '0px' }}>*/}
+            {/*      <strong>Pay Online</strong>*/}
+            {/*    </span>*/}
+            {/*  </a>*/}
+            {/*</div>*/}
           </div>
         </div>
       </div>
@@ -80,38 +80,38 @@ export default function Header() {
             </div>
             <div className="col-lg-3 col-sm-6">
               <ul className="header-right-content">
-                <li style={{ margin: '10px 0', marginRight: '15px' }}>
-                  <a
-                    href="https://netpointbd.ispdigital.cloud/BillPayment/Index"
-                    target="_blank"
-                    className="default-btn"
-                    style={{
-                      backgroundColor: 'transparent',
-                      color: 'white',
-                      padding: '10px 5px',
-                      borderRadius: '0px',
-                      textDecoration: 'none',
-                      fontWeight: 'bold',
-                      boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-                      transition: 'background 0.3s ease',
-                      display: 'inline-flex',
-                      alignItems: 'center'
-                    }}
-                  >
-                    <img
-                      src={getAssetPath('/assets/img/bKash_Nagad.png')}
-                      alt="Pay Now"
-                      width="60"
-                      height="30"
-                      title="Pay Bill"
-                      loading="lazy"
-                      style={{ borderRadius: '4px' }}
-                    />
-                    <span style={{ fontSize: '18px', backgroundColor: '#b8182b', color: 'white', padding: '5px', marginBottom: '0px' }}>
-                      <strong>Pay Online</strong>
-                    </span>
-                  </a>
-                </li>
+                {/*<li style={{ margin: '10px 0', marginRight: '15px' }}>*/}
+                {/*  <a*/}
+                {/*    href="https://netpointbd.ispdigital.cloud/BillPayment/Index"*/}
+                {/*    target="_blank"*/}
+                {/*    className="default-btn"*/}
+                {/*    style={{*/}
+                {/*      backgroundColor: 'transparent',*/}
+                {/*      color: 'white',*/}
+                {/*      padding: '10px 5px',*/}
+                {/*      borderRadius: '0px',*/}
+                {/*      textDecoration: 'none',*/}
+                {/*      fontWeight: 'bold',*/}
+                {/*      boxShadow: '0 4px 6px rgba(0,0,0,0.1)',*/}
+                {/*      transition: 'background 0.3s ease',*/}
+                {/*      display: 'inline-flex',*/}
+                {/*      alignItems: 'center'*/}
+                {/*    }}*/}
+                {/*  >*/}
+                {/*    <img*/}
+                {/*      src={getAssetPath('/assets/img/bKash_Nagad.png')}*/}
+                {/*      alt="Pay Now"*/}
+                {/*      width="60"*/}
+                {/*      height="30"*/}
+                {/*      title="Pay Bill"*/}
+                {/*      loading="lazy"*/}
+                {/*      style={{ borderRadius: '4px' }}*/}
+                {/*    />*/}
+                {/*    <span style={{ fontSize: '18px', backgroundColor: '#b8182b', color: 'white', padding: '5px', marginBottom: '0px' }}>*/}
+                {/*      <strong>Pay Online</strong>*/}
+                {/*    </span>*/}
+                {/*  </a>*/}
+                {/*</li>*/}
                 <li>
                   <Link href="/about#btrc">
                     <img src={getAssetPath('/assets/img/btrc-logo.png')} alt="BTRC Logo" width="30" height="30" title="BTRC Logo" loading="lazy" />
