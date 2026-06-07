@@ -1,8 +1,28 @@
-'use client';
-
 import PageTitle from '@/components/PageTitle';
+import { readJSON } from '@/lib/db';
+import type { ServicesFile } from '@/lib/types';
 
-export default function ServicesPage() {
+export const dynamic = "force-dynamic";
+
+const ICONS: Record<string, string> = {
+  "live-tv": "bx-tv",
+  "ftp-server": "bx-server",
+  "torrent": "bx-download",
+  "bangla-library": "bx-book",
+  "song-zone": "bx-music",
+  "newspaper": "bx-news",
+  "jobs": "bx-briefcase",
+  "gov-websites": "bx-buildings",
+  "education": "bx-book-reader",
+  "court-of-law": "bx-gavel",
+  "online-shop-point": "bx-cart",
+  "all-type-tickets": "bx-purchase-tag",
+  "emergency-service": "bx-phone",
+};
+
+export default async function ServicesIndexPage() {
+  const data = await readJSON<ServicesFile>('services');
+  const entries = Object.entries(data);
   return (
     <>
       <PageTitle title="Our Services" breadcrumb={[{ name: 'Services' }]} />
@@ -13,46 +33,18 @@ export default function ServicesPage() {
             <p>Additional services for our customers</p>
           </div>
           <div className="row">
-            <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <a href="/services/ftp-server" className="service-box">
-                <div className="single-challenges overly-one">
-                  <div className="overly-two">
-                    <i className="bx bx-server"></i>
-                    <h3>FTP Server</h3>
+            {entries.map(([slug, section]) => (
+              <div key={slug} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <a href={`/services/${slug}`} className="service-box">
+                  <div className="single-challenges overly-one">
+                    <div className="overly-two">
+                      <i className={`bx ${ICONS[slug] ?? 'bx-link'}`}></i>
+                      <h3>{section.pageTitle}</h3>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <a href="/services/live-tv" className="service-box">
-                <div className="single-challenges overly-one">
-                  <div className="overly-two">
-                    <i className="bx bx-tv"></i>
-                    <h3>Live TV</h3>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <a href="/services/torrent" className="service-box">
-                <div className="single-challenges overly-one">
-                  <div className="overly-two">
-                    <i className="bx bx-download"></i>
-                    <h3>Torrent</h3>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
-              <a href="/services/bangla-library" className="service-box">
-                <div className="single-challenges overly-one">
-                  <div className="overly-two">
-                    <i className="bx bx-book"></i>
-                    <h3>Bangla Library</h3>
-                  </div>
-                </div>
-              </a>
-            </div>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>

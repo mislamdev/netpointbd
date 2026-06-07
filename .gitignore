@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# admin backend
+/public/uploads/*
+!/public/uploads/.gitkeep
+

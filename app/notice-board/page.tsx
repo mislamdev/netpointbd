@@ -1,13 +1,17 @@
-'use client';
-
 import PageTitle from '@/components/PageTitle';
+import { readJSON } from '@/lib/db';
+import { getAssetPath } from '@/lib/utils';
+import type { Notice } from '@/lib/types';
 import ContactCallToAction from '@/components/ContactCallToAction';
 
-export default function NoticeBoardPage() {
+export const dynamic = "force-dynamic";
+
+export default async function NoticeBoardPage() {
+  const notices = await readJSON<Notice[]>('notices');
   return (
     <>
-      <PageTitle 
-        title="Notice Board" 
+      <PageTitle
+        title="Notice Board"
         style="centered"
         description="Stay updated with our latest news, announcements, and important updates. Check back regularly for service updates and special offers from Net Point BD."
       />
@@ -24,10 +28,42 @@ export default function NoticeBoardPage() {
                     <th scope="col">View</th>
                     <th scope="col">Download</th>
                   </tr>
-                </thead> 
+                </thead>
 
                 <tbody>
-                  {/* Notice items will be added here */}
+                  {notices.length === 0 ? (
+                    <tr>
+                      <td colSpan={5} style={{ textAlign: 'center', color: '#718096' }}>
+                        No notices yet.
+                      </td>
+                    </tr>
+                  ) : (
+                    notices.map((n, i) => (
+                      <tr key={n.id}>
+                        <td>{i + 1}</td>
+                        <td>{n.date}</td>
+                        <td>{n.title}</td>
+                        <td>
+                          {n.fileUrl ? (
+                            <a href={getAssetPath(n.fileUrl)} target="_blank" rel="noopener noreferrer">
+                              View
+                            </a>
+                          ) : (
+                            '—'
+                          )}
+                        </td>
+                        <td>
+                          {n.fileUrl ? (
+                            <a href={getAssetPath(n.fileUrl)} download>
+                              Download
+                            </a>
+                          ) : (
+                            '—'
+                          )}
+                        </td>
+                      </tr>
+                    ))
+                  )}
                 </tbody>
               </table>
             </div>

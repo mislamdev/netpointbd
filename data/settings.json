@@ -1,0 +1,58 @@
+{
+  "contact": {
+    "phones": [
+      { "label": "WhatsApp", "number": "+8801923315047" },
+      { "label": "Support",  "number": "+8809638102102" }
+    ],
+    "emails": ["info@netpoint.com.bd"],
+    "address": "Thanthania Opposite Bus-Stand, Bogura Sadar, Bogura-5800",
+    "social": {
+      "facebook": "https://www.facebook.com/netpointbdnet",
+      "youtube": "",
+      "linkedin": "",
+      "twitter": ""
+    }
+  },
+  "notification": {
+    "enabled": false,
+    "type": "info",
+    "text": "",
+    "link": null
+  },
+  "home": {
+    "hero": {
+      "title": "Reliable Broadband Internet Connection in Bogura",
+      "subtitle": "Looking For Fast Reliable Broadband Internet Service in Bogura Without any interrupt? Net Point BD is the perfect solution for you. Great offer for Dedicated & Corporate Users.",
+      "ctaLabel": "See Packages",
+      "ctaHref": "/packages"
+    },
+    "noticeboard": "Stay updated with our latest news, announcements, and important updates.",
+    "stats": [
+      { "label": "Network Setup", "value": "400" },
+      { "label": "Happy Client",  "value": "1000" },
+      { "label": "Expert Workers","value": "150" },
+      { "label": "Satisfactions", "value": "100" }
+    ],
+    "features": [
+      { "icon": "flaticon-testing",        "title": "Equipment Installation and Setup",  "text": "Net Point BD delivers tremendous value and super-fast broadband to the node network via optical fiber. We also offer a firewall and security system." },
+      { "icon": "flaticon-authentication", "title": "Customer Satisfaction Guarantee",   "text": "The amount of our company's satisfied customers grows with every new client creating satisfaction guarantee for everyone who uses our services." },
+      { "icon": "flaticon-call",           "title": "24/7 Customer Support Centre",      "text": "We offer our clients with free 24/7/365 online and technical support that guarantees the solution of any issues with your Broadband connection." }
+    ]
+  },
+  "about": {
+    "title": "Reliable Broadband Internet connection in Bogura",
+    "body": "Net Point BD is an uninterrupted reliable internet connection provider in Bogura. It offers you a satisfactory internet service.",
+    "mission": "Net Point BD is one of the Best ISP in Bogura. You will get a pleasant experience with our Internet Service. Your internet connection will be reliable with the best performance. You will get more than enough facilities in our Services."
+  },
+  "homeInternet": {
+    "title": "Home Internet",
+    "body": "You can get top home internet packages with an extensive range of high-quality data & internet connectivity services. It gives you 24-hour High-Speed Internet access for your home phone, laptop, and television."
+  },
+  "corporate": {
+    "title": "Corporate Internet",
+    "body": "Get a reliable, high-speed Corporate Internet Connection at an affordable price. We have separate bandwidth for Corporate Users with guaranteed uptime and priority support."
+  },
+  "footer": {
+    "companyBlurb": "Net Point BD is one of the Best ISP in Bogura. You will get a pleasant experience with our Internet Service. Your internet connection will be reliable with the best performance. You will get more than enough facilities in our Services."
+  }
+}

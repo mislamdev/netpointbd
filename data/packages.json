@@ -1,0 +1,190 @@
+{
+  "home": {
+    "title": "Home Internet",
+    "plans": [
+      {
+        "id": "pkg-home-1",
+        "name": "Basic",
+        "price": 500,
+        "currency": "৳",
+        "unit": "/Month",
+        "features": [
+          "Internet Speed: Up to 20 Mbps",
+          "Traffic: Unlimited",
+          "Cable: Optical Fiber Connection",
+          "Online Payment System",
+          "1:8 Contention Ratio",
+          "Phone and online support",
+          "Only For Single Router",
+          "OTC 1000 Tk",
+          "Shared Bandwidth"
+        ],
+        "order": 1
+      },
+      {
+        "id": "pkg-home-2",
+        "name": "Basic Plus",
+        "price": 600,
+        "currency": "৳",
+        "unit": "/Month",
+        "features": [
+          "Internet Speed: Up to 30 Mbps",
+          "Traffic: Unlimited",
+          "Cable: Optical Fiber Connection",
+          "Online Payment System",
+          "1:8 Contention Ratio",
+          "Phone and online support",
+          "Only For Single Router",
+          "OTC 1000 Tk",
+          "Shared Bandwidth"
+        ],
+        "order": 2
+      },
+      {
+        "id": "pkg-home-3",
+        "name": "STAR",
+        "price": 700,
+        "currency": "৳",
+        "unit": "/Month",
+        "features": [
+          "Internet Speed: Up to 40 Mbps",
+          "Data Traffic: Unlimited",
+          "BDIX, FTP & CDN: Unlimited High-Speed",
+          "Streaming: 4K YouTube & Facebook",
+          "Connection Type: Optical Fiber Cable",
+          "Payment: Online Payment Available",
+          "Contention Ratio: 1:8 (Shared Bandwidth)",
+          "Support: Phone & Online Support",
+          "Usage Policy: Only for Single Router",
+          "One Time Charge (OTC): 1000 Tk"
+        ],
+        "order": 3
+      },
+      {
+        "id": "pkg-home-4",
+        "name": "Bronze",
+        "price": 800,
+        "currency": "৳",
+        "unit": "/Month",
+        "features": [
+          "Internet Speed: Up to 50 Mbps",
+          "Data Traffic: Unlimited",
+          "BDIX, FTP & CDN: Unlimited High-Speed",
+          "Streaming: 4K YouTube & Facebook",
+          "Connection Type: Optical Fiber Cable",
+          "Payment: Online Payment Available",
+          "Contention Ratio: 1:8 (Shared Bandwidth)",
+          "Support: Phone & Online Support",
+          "Usage Policy: Only for Single Router",
+          "One Time Charge (OTC): 1000 Tk"
+        ],
+        "order": 4
+      },
+      {
+        "id": "pkg-home-5",
+        "name": "Bronze Plus",
+        "price": 1000,
+        "currency": "৳",
+        "unit": "/Month",
+        "features": [
+          "Internet Speed: Up to 70 Mbps",
+          "Data Traffic: Unlimited",
+          "BDIX, FTP & CDN: Unlimited High-Speed",
+          "Streaming: 4K YouTube & Facebook",
+          "Connection Type: Optical Fiber Cable",
+          "Payment: Online Payment Available",
+          "Contention Ratio: 1:8 (Shared Bandwidth)",
+          "Support: Phone & Online Support",
+          "Usage Policy: Only for Single Router",
+          "One Time Charge (OTC): 1000 Tk"
+        ],
+        "order": 5
+      },
+      {
+        "id": "pkg-home-6",
+        "name": "Silver",
+        "price": 1200,
+        "currency": "৳",
+        "unit": "/Month",
+        "features": [
+          "Internet Speed: Up to 90 Mbps",
+          "Data Traffic: Unlimited",
+          "BDIX, FTP & CDN: Unlimited High-Speed",
+          "Streaming: 4K YouTube & Facebook",
+          "Connection Type: Optical Fiber Cable",
+          "Payment: Online Payment Available",
+          "Contention Ratio: 1:8 (Shared Bandwidth)",
+          "Support: Phone & Online Support",
+          "Usage Policy: Only for Single Router",
+          "One Time Charge (OTC): 1000 Tk"
+        ],
+        "order": 6
+      }
+    ]
+  },
+  "corporate": {
+    "title": "Corporate Internet",
+    "plans": [
+      {
+        "id": "pkg-corp-1",
+        "name": "DEDICATED BANDWIDTH",
+        "price": 0,
+        "currency": "৳",
+        "unit": "/Month",
+        "features": [
+          "Full duplex dedicated bandwidth mean you will get guaranteed stable bandwidth with full upload and download. It's give you full controlled superior internet experience on bigger network.",
+          "100% fiber-optic network",
+          "Get Fast Internet Speeds at Good Prices"
+        ],
+        "order": 1
+      }
+    ]
+  },
+  "government": {
+    "title": "Government Internet",
+    "plans": [
+      {
+        "id": "pkg-gov-1",
+        "name": "Basic",
+        "price": 525,
+        "currency": "৳",
+        "unit": "/Month",
+        "features": [
+          "Internet Speed (Max): 10 Mbps",
+          "Sharing Ratio: 1:8",
+          "Cable: Fiber Optics",
+          "24/7 phone and online support"
+        ],
+        "order": 1
+      },
+      {
+        "id": "pkg-gov-2",
+        "name": "Basic Plus",
+        "price": 840,
+        "currency": "৳",
+        "unit": "/Month",
+        "features": [
+          "Internet Speed (Max): 40 Mbps",
+          "Sharing Ratio: 1:8",
+          "Cable: Fiber Optics",
+          "24/7 phone and online support"
+        ],
+        "order": 2
+      },
+      {
+        "id": "pkg-gov-3",
+        "name": "Bronze",
+        "price": 1260,
+        "currency": "৳",
+        "unit": "/Month",
+        "features": [
+          "Internet Speed (Max): 60 Mbps",
+          "Sharing Ratio: 1:8",
+          "Cable: Fiber Optics",
+          "24/7 phone and online support"
+        ],
+        "order": 3
+      }
+    ]
+  }
+}

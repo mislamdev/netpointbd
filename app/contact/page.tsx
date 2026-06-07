@@ -1,16 +1,20 @@
-'use client';
-
 import PageTitle from '@/components/PageTitle';
+import { readJSON } from '@/lib/db';
+import type { SettingsFile } from '@/lib/types';
 
-export default function ContactPage() {
+export const dynamic = "force-dynamic";
+
+export default async function ContactPage() {
+  const settings = await readJSON<SettingsFile>('settings');
+  const { contact } = settings;
   return (
     <>
-      <PageTitle 
-        title="Get in Touch" 
+      <PageTitle
+        title="Get in Touch"
         style="centered"
         description="Have questions about our services? Need technical support? Looking to get a new connection? Our friendly team is here to help you 24/7. Reach out to us and experience the best customer service in Bogura."
       />
-      
+
       <section className="main-contact-area ptb-100">
         <div className="container">
           <div className="row align-items-center">
@@ -70,43 +74,58 @@ export default function ContactPage() {
                   <li className="location">
                     <i className="bx bxs-location-plus"></i>
                     <span>Address</span>
-                    <a href="#">Thanthania Opposite Bus-Stand, Bogura Sadar, Bogura-5800</a>
+                    <a href="#">{contact.address}</a>
                   </li>
                   <li>
                     <i className="bx bxs-phone-call"></i>
                     <span>Phone</span>
-                    <a href="tel:+8801923315047">01923315047 (WhatsApp)</a>
-                    <a href="tel:+8809638102102">09638 102 102</a>
+                    {contact.phones.map((p, i) => (
+                      <a key={i} href={`tel:${p.number}`}>
+                        {p.number} {p.label ? `(${p.label})` : ''}
+                      </a>
+                    ))}
                   </li>
                   <li>
                     <i className="bx bxs-envelope"></i>
                     <span>Email</span>
-                    <a href="mailto:info@netpoint.com.bd">info@netpoint.com.bd</a>
+                    {contact.emails.map((e, i) => (
+                      <a key={i} href={`mailto:${e}`}>
+                        {e}
+                      </a>
+                    ))}
                   </li>
                 </ul>
                 <div className="sidebar-follow-us">
                   <h3>Follow us:</h3>
                   <ul className="social-wrap">
-                    <li>
-                      <a target="_blank" href="https://www.facebook.com/netpointbdnet" rel="noopener noreferrer">
-                        <i className="bx bxl-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a target="_blank" href="#" rel="noopener noreferrer">
-                        <i className="bx bxl-youtube"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a target="_blank" href="#" rel="noopener noreferrer">
-                        <i className="bx bxl-linkedin"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a target="_blank" href="#" rel="noopener noreferrer">
-                        <i className="bx bxl-twitter"></i>
-                      </a>
-                    </li>
+                    {contact.social.facebook && (
+                      <li>
+                        <a target="_blank" href={contact.social.facebook} rel="noopener noreferrer">
+                          <i className="bx bxl-facebook"></i>
+                        </a>
+                      </li>
+                    )}
+                    {contact.social.youtube && (
+                      <li>
+                        <a target="_blank" href={contact.social.youtube} rel="noopener noreferrer">
+                          <i className="bx bxl-youtube"></i>
+                        </a>
+                      </li>
+                    )}
+                    {contact.social.linkedin && (
+                      <li>
+                        <a target="_blank" href={contact.social.linkedin} rel="noopener noreferrer">
+                          <i className="bx bxl-linkedin"></i>
+                        </a>
+                      </li>
+                    )}
+                    {contact.social.twitter && (
+                      <li>
+                        <a target="_blank" href={contact.social.twitter} rel="noopener noreferrer">
+                          <i className="bx bxl-twitter"></i>
+                        </a>
+                      </li>
+                    )}
                   </ul>
                 </div>
               </div>

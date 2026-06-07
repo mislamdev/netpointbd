@@ -1,0 +1,138 @@
+{
+  "live-tv": {
+    "pageTitle": "Live TV",
+    "pageDescription": "Watch live TV channels, sports, news, and entertainment from Bangladesh and around the world with our premium streaming services.",
+    "items": [
+      { "id": "lv-1", "name": "Obiram TV", "url": "https://obiramtvlive.pages.dev/", "image": "/assets/img/allservices/obiram-tv.jpg" },
+      { "id": "lv-2", "name": "RoarZone Live", "url": "https://tv.roarzone.net/", "image": "/assets/img/allservices/roarzone-tv.jpg" },
+      { "id": "lv-3", "name": "NeT-PoinT Live", "url": "http://97.74.103.44/jwtv1/index.php", "image": "/assets/img/allservices/sports.jpg" },
+      { "id": "lv-4", "name": "Live Tv Sports", "url": "http://172.17.50.112", "image": "/assets/img/allservices/net-point-bd.jpg" },
+      { "id": "lv-5", "name": "LIVE Mazic TV", "url": "http://moviemazic.xyz/live-tv.html", "image": "/assets/img/allservices/bdip-live.jpg" },
+      { "id": "lv-6", "name": "iptvidn", "url": "http://tv.bdiptv.net", "image": "/assets/img/services/live-tv.jpg" },
+      { "id": "lv-7", "name": "bdiptv", "url": "http://tv.bdiptv.net/", "image": "/assets/img/allservices/net-point-bd.jpg" },
+      { "id": "lv-8", "name": "iptvidn2", "url": "http://iptvidn.com/", "image": "/assets/img/services/live-tv.jpg" },
+      { "id": "lv-9", "name": "Sports TV", "url": "http://172.27.27.200/home/index/pyv67elzqk3", "image": "/assets/img/allservices/sports.jpg" },
+      { "id": "lv-10", "name": "Just Live Sports", "url": "http://tv.bdiptv.net", "image": "/assets/img/allservices/live-tv.jpg" },
+      { "id": "lv-11", "name": "Live TV", "url": "http://iptvidn.com", "image": "/assets/img/allservices/live-tv.jpg" },
+      { "id": "lv-12", "name": "Just Live Sports", "url": "http://172.17.50.112/", "image": "/assets/img/allservices/bdip-live.jpg" }
+    ]
+  },
+  "ftp-server": {
+    "pageTitle": "FTP Server",
+    "pageDescription": "Access high-speed FTP servers with unlimited movies, TV shows, software, and entertainment content exclusively for Net Point BD customers.",
+    "items": [
+      { "id": "ft-1", "name": "RELAX TIME", "url": "http://10.100.100.10/", "image": "/assets/img/allservices/unnamed (1).png" },
+      { "id": "ft-2", "name": "DHAKA MOVIE", "url": "http://dhakamovie.com", "image": "/assets/img/allservices/unnamed (1).png" },
+      { "id": "ft-3", "name": "Smart Studio ftp", "url": "http://www.smartstudio.digital:8096", "image": "/assets/img/allservices/unnamed (1).png" },
+      { "id": "ft-4", "name": "SAM FTP", "url": "http://172.16.50.4/", "image": "/assets/img/allservices/sam-ftp.jpg" },
+      { "id": "ft-5", "name": "ftpbd", "url": "https://ftpbd.net", "image": "/assets/img/allservices/unnamed (1).png" },
+      { "id": "ft-6", "name": "Movie Mazic", "url": "http://moviemazic.xyz", "image": "/assets/img/allservices/unnamed (1).png" },
+      { "id": "ft-7", "name": "Net-Point Binodon", "url": "https://movies.discoveryftp.net/", "image": "/assets/img/allservices/net-point-binodon.jpg" },
+      { "id": "ft-8", "name": "discovery ftp", "url": "https://discoveryftp.net", "image": "/assets/img/allservices/media-house.jpg" },
+      { "id": "ft-9", "name": "Circle ftp", "url": "http://main.circleftp.net", "image": "/assets/img/allservices/unnamed (1).png" },
+      { "id": "ft-10", "name": "Cinema Bazar", "url": "http://10.100.100.100:8096/web/#/home.html", "image": "/assets/img/allservices/unnamed (1).png" },
+      { "id": "ft-11", "name": "Show Time", "url": "http://showtimebd.com/", "image": "/assets/img/allservices/show-time.jpg" },
+      { "id": "ft-12", "name": "Software", "url": "http://server3.ftpbd.net/FTP-3/SOFTWARE-COLLECTION/", "image": "/assets/img/allservices/unnamed (1).png" },
+      { "id": "ft-13", "name": "SMART FTP", "url": "http://www.smartstudio.digital:8096/web/#/home.html", "image": "/assets/img/allservices/unnamed (1).png" },
+      { "id": "ft-14", "name": "FTPBD", "url": "http://server2.ftpbd.net", "image": "/assets/img/allservices/unnamed (1).png" },
+      { "id": "ft-15", "name": "Roarzone Movie site", "url": "https://play.roarzone.info/web/index.html#!/home", "image": "/assets/img/allservices/unnamed (1).png" }
+    ]
+  },
+  "torrent": {
+    "pageTitle": "Torrent",
+    "pageDescription": "Download files efficiently using torrent services. Access a wide range of content with high-speed downloads through our network.",
+    "items": [
+      { "id": "tr-1", "name": "Torrent", "url": "https://www.utorrent.com/", "image": "/assets/img/allservices/torrent.jpg" }
+    ]
+  },
+  "bangla-library": {
+    "pageTitle": "Bangla Library",
+    "pageDescription": "Explore thousands of Bangla books, novels, and literature online. Your digital gateway to Bengali literature and knowledge.",
+    "items": [
+      { "id": "bl-1", "name": "Bangla Library", "url": "https://www.ebanglalibrary.com/", "image": "/assets/img/allservices/banglalibrary.jpg" },
+      { "id": "bl-2", "name": "BDeBooks", "url": "https://bdebooks.com/", "image": "/assets/img/allservices/BDeBooks.jpg" },
+      { "id": "bl-3", "name": "Bangla Library । বাংলা বই", "url": "https://www.banglalibrary.com/", "image": "/assets/img/allservices/bangla-library.jpg" }
+    ]
+  },
+  "song-zone": {
+    "pageTitle": "Song Zone",
+    "pageDescription": "Stream your favorite Bengali and international music online. Discover millions of songs, albums, and playlists from top music platforms.",
+    "items": [
+      { "id": "sz-1", "name": "Hungama", "url": "https://www.hungama.com/albums/lang/bengali/popular/", "image": "/assets/img/allservices/hungama.jpg" },
+      { "id": "sz-2", "name": "Wynk Music", "url": "https://wynk.in/music/playlist/bengali-top-20/bb_1519291110573", "image": "/assets/img/allservices/Wynk-music.jpg" },
+      { "id": "sz-3", "name": "SoundCloud", "url": "https://soundcloud.com/", "image": "/assets/img/allservices/soundcloud.jpg" }
+    ]
+  },
+  "newspaper": {
+    "pageTitle": "Newspaper",
+    "pageDescription": "Stay updated with the latest news from Bangladesh's leading newspapers. Read daily news, articles, and updates from trusted sources.",
+    "items": [
+      { "id": "np-1", "name": "Bangladesh Pratidin", "url": "https://www.bd-pratidin.com/", "image": "/assets/img/allservices/bangladesh-pratidin.jpg" },
+      { "id": "np-2", "name": "Nayadiganta", "url": "https://www.dailynayadiganta.com/", "image": "/assets/img/allservices/nayadiganta.jpg" },
+      { "id": "np-3", "name": "The Daily Ittefaq", "url": "https://www.ittefaq.com.bd/", "image": "/assets/img/allservices/ittefaq.jpg" }
+    ]
+  },
+  "jobs": {
+    "pageTitle": "Jobs",
+    "pageDescription": "Find your dream job in Bangladesh. Search thousands of job listings from top companies, government positions, and career opportunities.",
+    "items": [
+      { "id": "jb-1", "name": "Bdjobs.com", "url": "https://www.bdjobs.com/", "image": "/assets/img/allservices/bdjobs.jpg" },
+      { "id": "jb-2", "name": "BD Jobs Today", "url": "https://bdjobstoday.com/", "image": "/assets/img/allservices/bdjobs-today.jpg" },
+      { "id": "jb-3", "name": "BD Govt Jobs", "url": "https://bdgovtjobs.com/", "image": "/assets/img/allservices/bd-govt-jobs.jpg" }
+    ]
+  },
+  "gov-websites": {
+    "pageTitle": "সরকারি ওয়েবসাইট সমূহ",
+    "pageDescription": "বাংলাদেশের সকল গুরুত্বপূর্ণ সরকারি ওয়েবসাইট এবং সেবা এক জায়গায়। সরকারি তথ্য ও সেবা পেতে সহজ প্রবেশাধিকার।",
+    "items": [
+      { "id": "gw-1", "name": "ভূমি মন্ত্রণালয়", "url": "https://land.gov.bd/", "image": "/assets/img/allservices/bdland.jpg" },
+      { "id": "gw-2", "name": "খাদ্য অধিদপ্তর", "url": "https://www.dgfood.gov.bd/", "image": "/assets/img/allservices/bd-govt-jobs.jpg" },
+      { "id": "gw-3", "name": "বাংলাদেশ জাতীয় তথ্য বাতায়ন", "url": "https://bangladesh.gov.bd/index.php", "image": "/assets/img/allservices/bd.jpg" }
+    ]
+  },
+  "education": {
+    "pageTitle": "Education",
+    "pageDescription": "Access educational resources, exam results, and learning platforms. Your gateway to quality education and academic information in Bangladesh.",
+    "items": [
+      { "id": "ed-1", "name": "Ministry of Education", "url": "http://www.educationboardresults.gov.bd/", "image": "/assets/img/allservices/bd_logo.jpg" },
+      { "id": "ed-2", "name": "EDPDU", "url": "https://edpdu.com/bn", "image": "/assets/img/allservices/edpdu.jpg" },
+      { "id": "ed-3", "name": "a2i", "url": "https://a2i.gov.bd/", "image": "/assets/img/allservices/a2i.jpg" }
+    ]
+  },
+  "court-of-law": {
+    "pageTitle": "আইন আদালত",
+    "pageDescription": "আইনি সেবা, আদালতের কার্যতালিকা, রায়, এবং আইনজীবী খুঁজুন। বাংলাদেশের আইন ও বিচার ব্যবস্থার সকল তথ্য এক জায়গায়।",
+    "items": [
+      { "id": "cl-1", "name": "Find My Advocate", "url": "https://www.findmyadvocatebd.com/", "image": "/assets/img/allservices/find-my-advocate.jpg" },
+      { "id": "cl-2", "name": "ই-কার্যতালিকা -সকল মামলার তথ্য এক তালিকায়", "url": "https://causelist.judiciary.gov.bd/", "image": "/assets/img/allservices/ecourt.jpg" },
+      { "id": "cl-3", "name": "বাংলাদেশ ফরম", "url": "http://forms.mygov.bd/", "image": "/assets/img/allservices/bdform.jpg" },
+      { "id": "cl-4", "name": "অধস্তন আদালতের রায়", "url": "http://decision.bdcourts.gov.bd/", "image": "/assets/img/allservices/bdcourts.jpg" }
+    ]
+  },
+  "online-shop-point": {
+    "pageTitle": "Online Shop Point",
+    "pageDescription": "Shop online from Bangladesh's top e-commerce platforms. Browse millions of products with convenient home delivery and secure payments.",
+    "items": [
+      { "id": "os-1", "name": "Daraz", "url": "https://www.daraz.com.bd/", "image": "/assets/img/allservices/daraz.jpg" },
+      { "id": "os-2", "name": "AjkerDeal", "url": "https://www.ajkerdeal.com/", "image": "/assets/img/allservices/ajkerdeal.jpg" },
+      { "id": "os-3", "name": "Chaldal", "url": "https://chaldal.com/", "image": "/assets/img/allservices/caldal.jpg" }
+    ]
+  },
+  "all-type-tickets": {
+    "pageTitle": "সকল প্রকার টিকেট",
+    "pageDescription": "বিমান, ট্রেন এবং বাসের টিকেট অনলাইনে বুক করুন। দ্রুত এবং নিরাপদ টিকেট বুকিং সেবা।",
+    "items": [
+      { "id": "tk-1", "name": "Biman Bangladesh Airlines Ltd", "url": "https://www.biman-airlines.com/", "image": "/assets/img/allservices/biman-ticket.jpg" },
+      { "id": "tk-2", "name": "বাংলাদেশ রেলওয়ে", "url": "https://railway.portal.gov.bd/", "image": "/assets/img/allservices/railway-ticket.jpg" }
+    ]
+  },
+  "emergency-service": {
+    "pageTitle": "Emergency Service",
+    "pageDescription": "Quick access to emergency services including fire service, ambulance, and crisis helplines. Get help when you need it most.",
+    "items": [
+      { "id": "em-1", "name": "ফায়ার সার্ভিস ও সিভিল ডিফেন্স", "url": "https://fireservice.gov.bd/", "image": "/assets/img/allservices/fire-service.jpg" },
+      { "id": "em-2", "name": "Ambulance BD 24", "url": "https://ambulancebd24.com/", "image": "/assets/img/allservices/ambulance-BD-24.jpg" },
+      { "id": "em-3", "name": "Dnet", "url": "https://dnet.org.bd/", "image": "/assets/img/allservices/dnet.jpg" }
+    ]
+  }
+}
