@@ -16,10 +16,11 @@ export default function FTPServerPage() {
     { name: 'Circle ftp', url: 'http://main.circleftp.net', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
     { name: 'Cinema Bazar', url: 'http://10.100.100.100:8096/web/#/home.html', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
     { name: 'Show Time', url: 'http://showtimebd.com/', image: getAssetPath('/assets/img/allservices/show-time.jpg') },
-    { name: 'Software', url: 'http://server3.ftpbd.net/FTP-3/SOFTWARE-COLLECTION/', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
+    { name: 'CINEPLEX BD', url: 'http://103.136.200.66/', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
     { name: 'SMART FTP', url: 'http://www.smartstudio.digital:8096/web/#/home.html', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
     { name: 'FTPBD', url: 'http://server2.ftpbd.net', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
-    { name: 'Roarzone Movie site', url: 'https://play.roarzone.info/web/index.html#!/home', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
+    { name: 'Roarzone Movie site', url: 'https://play.roarzone.net/web/index.html#!/home', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
+    { name: 'INFO MEDIA', url: 'http://103.225.94.27/mediaserver/', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
   ];
 
   return (
