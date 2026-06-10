@@ -7,7 +7,7 @@ export default function LiveTVPage() {
   const liveTVServices = [
     // { name: 'Obiram TV', url: 'https://obiramtvlive.pages.dev/', image: getAssetPath('/assets/img/allservices/obiram-tv.jpg') },
     // { name: 'RoarZone Live', url: 'https://tv.roarzone.net/', image: getAssetPath('/assets/img/allservices/roarzone-tv.jpg') },
-    { name: 'NeT-PoinT Live', url: 'http://97.74.103.44/jwtv1/index.php', image: getAssetPath('/assets/img/allservices/sports.jpg') },
+    { name: 'NeT-PoinT Live', url: 'http://97.74.103.44', image: getAssetPath('/assets/img/allservices/sports.jpg') },
     { name: 'Live Tv Sports', url: 'http://172.17.50.112', image: getAssetPath('/assets/img/allservices/net-point-bd.jpg') },
     { name: 'LIVE Mazic TV', url: 'http://moviemazic.xyz/live-tv.html', image: getAssetPath('/assets/img/allservices/bdip-live.jpg') },
     { name: 'iptvidn', url: 'http://tv.bdiptv.net', image: getAssetPath('/assets/img/services/live-tv.jpg') },
