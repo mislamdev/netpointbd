@@ -15,7 +15,7 @@ export default function FTPServerPage() {
     { name: 'discovery ftp', url: 'https://discoveryftp.net', image: getAssetPath('/assets/img/allservices/media-house.jpg') },
     { name: 'Circle ftp', url: 'http://main.circleftp.net', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
     { name: 'Cinema Bazar', url: 'http://10.100.100.100:8096/web/#/home.html', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
-    { name: 'Show Time', url: 'http://showtimebd.com/', image: getAssetPath('/assets/img/allservices/show-time.jpg') },
+    { name: 'Show Time', url: 'http://172.27.27.84/', image: getAssetPath('/assets/img/allservices/show-time.jpg') },
     { name: 'CINEPLEX BD', url: 'http://103.136.200.66/', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
     { name: 'SMART FTP', url: 'http://www.smartstudio.digital:8096/web/#/home.html', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
     { name: 'FTPBD', url: 'http://server2.ftpbd.net', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
