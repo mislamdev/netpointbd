@@ -5,6 +5,7 @@ import { getAssetPath } from '@/lib/utils';
 
 export default function LiveTVPage() {
   const liveTVServices = [
+    { name: 'Live TV', url: 'http://172.17.50.112/', image: getAssetPath('/assets/img/allservices/obiram-tv.jpg') },
     // { name: 'Obiram TV', url: 'https://obiramtvlive.pages.dev/', image: getAssetPath('/assets/img/allservices/obiram-tv.jpg') },
     // { name: 'RoarZone Live', url: 'https://tv.roarzone.net/', image: getAssetPath('/assets/img/allservices/roarzone-tv.jpg') },
     { name: 'BTV Live', url: 'https://www.btvlive.gov.bd/channel/BTV', image: getAssetPath('/assets/img/allservices/sports.jpg') },
