@@ -5,6 +5,7 @@ import { getAssetPath } from '@/lib/utils';
 
 export default function FTPServerPage() {
   const ftpServers = [
+    { name: 'NP FTP', url: 'http://172.27.27.84/', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
     { name: 'RELAX TIME', url: 'http://10.100.100.10/', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
     { name: 'DHAKA MOVIE', url: 'http://dhakamovie.com', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
     { name: 'Smart Studio ftp', url: 'http://www.smartstudio.digital:8096', image: getAssetPath('/assets/img/allservices/unnamed (1).png') },
