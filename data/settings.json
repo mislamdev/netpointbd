@@ -52,14 +52,14 @@
       {
         "text": "Emergency support hotline is active 24/7 for urgent connectivity issues.",
         "link": "tel:+8809638102102",
-        "enabled": false,
-        "startAt": "",
-        "endAt": ""
+        "enabled": true,
+        "startAt": "2026-07-22T17:25:00.000Z",
+        "endAt": "2026-07-22T17:30:00.000Z"
       },
       {
         "text": "Planned maintenance tonight from 2:00 AM to 3:00 AM in selected Bogura zones.",
         "link": "/notice-board",
-        "enabled": true,
+        "enabled": false,
         "startAt": "",
         "endAt": ""
       }
