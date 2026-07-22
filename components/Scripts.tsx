@@ -98,6 +98,18 @@ export default function Scripts() {
                 1200: { items: 6 },
               },
             });
+
+            // Emergency Notice Slider
+            $('.emergency-notice-slider').owlCarousel({
+              items: 1,
+              loop: true,
+              margin: 0,
+              nav: false,
+              dots: false,
+              autoplay: true,
+              smartSpeed: 700,
+              autoplayHoverPause: true,
+            });
           }
 
           // Jarallax

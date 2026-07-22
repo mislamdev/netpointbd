@@ -108,6 +108,13 @@ export const settingsFileSchema = z.object({
         ctaHref: z.string(),
       }),
     ),
+    emergencyNotices: z.array(
+      z.object({
+        text: z.string(),
+        link: z.string(),
+        enabled: z.boolean(),
+      }),
+    ),
     noticeboard: z.string(),
     stats: z.array(z.object({ label: z.string(), value: z.string() })),
     features: z.array(z.object({ icon: z.string(), title: z.string(), text: z.string() })),

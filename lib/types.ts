@@ -98,6 +98,11 @@ export interface HomePageSettings {
     ctaLabel: string;
     ctaHref: string;
   }[];
+  emergencyNotices: {
+    text: string;
+    link: string;
+    enabled: boolean;
+  }[];
   noticeboard: string;
   stats: { label: string; value: string }[];
   features: { icon: string; title: string; text: string }[];

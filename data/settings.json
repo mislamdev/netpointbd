@@ -48,6 +48,18 @@
         "ctaHref": "/corporate"
       }
     ],
+    "emergencyNotices": [
+      {
+        "text": "Emergency support hotline is active 24/7 for urgent connectivity issues.",
+        "link": "tel:+8809638102102",
+        "enabled": true
+      },
+      {
+        "text": "Planned maintenance tonight from 2:00 AM to 3:00 AM in selected Bogura zones.",
+        "link": "/notice-board",
+        "enabled": true
+      }
+    ],
     "noticeboard": "Stay updated with our latest news, announcements, and important updates.",
     "stats": [
       {

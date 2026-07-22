@@ -41,10 +41,11 @@ export default async function RootLayout({
         <link rel="stylesheet" href={`${basePath}/assets/css/odometer.min.css`} />
         <link rel="stylesheet" href={`${basePath}/assets/css/style.css`} />
         <link rel="stylesheet" href={`${basePath}/assets/css/responsive.css`} />
+        <title>NetPoint BD</title>
       </head>
       <body>
         <NotificationBanner value={settings.notification} />
-        <Header contact={settings.contact} />
+        <Header contact={settings.contact} home={settings.home} />
         {children}
         <Footer blurb={settings.footer.companyBlurb} contact={settings.contact} />
         <Scripts />
