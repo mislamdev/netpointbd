@@ -17,7 +17,11 @@ export async function POST(req: Request) {
   if (!user) {
     return NextResponse.json({ error: "Invalid username or password" }, { status: 401 });
   }
-  const token = await signSession({ sub: user.id, username: user.username, role: user.role });
-  await setSessionCookie(token);
+  try {
+    const token = await signSession({ sub: user.id, username: user.username, role: user.role });
+    await setSessionCookie(token);
+  } catch {
+    return NextResponse.json({ error: "Server auth is not configured" }, { status: 500 });
+  }
   return NextResponse.json({ ok: true, user: { id: user.id, username: user.username, role: user.role } });
 }

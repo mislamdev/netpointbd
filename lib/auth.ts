@@ -4,17 +4,10 @@ import { randomUUID } from "crypto";
 import bcrypt from "bcryptjs";
 import { readJSON, writeJSON } from "./db";
 import type { User, UserRole } from "./types";
+import { getJwtSecretOrThrow } from "./jwt-secret";
 
 const COOKIE_NAME = "np_admin_session";
 const COOKIE_MAX_AGE = 60 * 60 * 8;
-
-function getSecret(): Uint8Array {
-  const secret = process.env.JWT_SECRET;
-  if (!secret || secret.length < 16) {
-    throw new Error("JWT_SECRET env var must be set (>= 16 chars).");
-  }
-  return new TextEncoder().encode(secret);
-}
 
 export interface SessionPayload {
   sub: string;
@@ -28,12 +21,12 @@ export async function signSession(payload: SessionPayload): Promise<string> {
     .setSubject(payload.sub)
     .setIssuedAt()
     .setExpirationTime(`${COOKIE_MAX_AGE}s`)
-    .sign(getSecret());
+    .sign(getJwtSecretOrThrow());
 }
 
 export async function verifySession(token: string): Promise<SessionPayload | null> {
   try {
-    const { payload } = await jwtVerify(token, getSecret());
+    const { payload } = await jwtVerify(token, getJwtSecretOrThrow());
     if (typeof payload.sub !== "string" || typeof payload.username !== "string" || typeof payload.role !== "string") {
       return null;
     }

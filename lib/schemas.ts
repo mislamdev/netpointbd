@@ -127,5 +127,5 @@ export const usersFileSchema = z.array(userSchema);
 
 export const loginSchema = z.object({
   username: nonEmpty,
-  password: z.string().min(6),
+  password: nonEmpty,
 });

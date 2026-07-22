@@ -135,7 +135,7 @@ export default function Footer({ blurb, contact }: { blurb: string; contact: Con
             </div>
             <div className="col-xl-6">
               <p className="text-center text-xl-end">
-                Website Design by <a target="_blank" href="https://www.cms.com.bd/">cms.com.bd</a> &amp; Hosted by <a target="_blank" href="https://www.host.net.bd/">host.net.bd</a>
+                Website Design by <a target="_blank" href="https://m4a.tech/">M4A Group</a> &amp; Hosted by <a target="_blank" href="https://m4a.tech">M4A</a>
               </p>
             </div>
           </div>
