@@ -113,6 +113,8 @@ export const settingsFileSchema = z.object({
         text: z.string(),
         link: z.string(),
         enabled: z.boolean(),
+        startAt: z.string(),
+        endAt: z.string(),
       }),
     ),
     noticeboard: z.string(),

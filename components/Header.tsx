@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getAssetPath } from '@/lib/utils';
 import type { ContactSettings, HomePageSettings } from '@/lib/types';
@@ -8,8 +9,21 @@ export default function Header({ contact, home }: { contact: ContactSettings; ho
   const whatsapp = contact.phones.find((p) => /whatsapp/i.test(p.label))?.number ?? contact.phones[0]?.number ?? '';
   const support = contact.phones.find((p) => /support/i.test(p.label))?.number ?? contact.phones[1]?.number ?? '';
   const email = contact.emails[0] ?? '';
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    const id = setInterval(() => setNow(Date.now()), 30000);
+    return () => clearInterval(id);
+  }, []);
   const emergencyNotices = Array.isArray(home.emergencyNotices)
-    ? home.emergencyNotices.filter((item) => item.enabled && item.text.trim().length > 0)
+    ? home.emergencyNotices.filter((item) => {
+        if (!item.enabled) return false;
+        if (item.text.trim().length === 0) return false;
+        const start = item.startAt ? Date.parse(item.startAt) : NaN;
+        const end = item.endAt ? Date.parse(item.endAt) : NaN;
+        if (!Number.isNaN(end) && end <= now) return false;
+        if (!Number.isNaN(start) && start > now) return false;
+        return true;
+      })
     : [];
 
   function renderNoticeItem(item: HomePageSettings["emergencyNotices"][number], index: number) {

@@ -102,6 +102,8 @@ export interface HomePageSettings {
     text: string;
     link: string;
     enabled: boolean;
+    startAt: string;
+    endAt: string;
   }[];
   noticeboard: string;
   stats: { label: string; value: string }[];

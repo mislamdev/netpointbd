@@ -12,6 +12,8 @@ import type {
 
 export const dynamic = "force-dynamic";
 
+const RENDER_NOW = Date.now();
+
 export default async function AdminDashboard() {
   await adminOrRedirect();
   const [services, packages, products, coverage, notices, settings] = await Promise.all([
@@ -22,6 +24,18 @@ export default async function AdminDashboard() {
     readJSON<Notice[]>("notices"),
     readJSON<SettingsFile>("settings"),
   ]);
+
+  const now = RENDER_NOW;
+  const visibleEmergency = settings.home.emergencyNotices.filter((n) => {
+    if (!n.enabled) return false;
+    if (n.text.trim().length === 0) return false;
+    const start = n.startAt ? Date.parse(n.startAt) : NaN;
+    const end = n.endAt ? Date.parse(n.endAt) : NaN;
+    if (!Number.isNaN(end) && end <= now) return false;
+    if (!Number.isNaN(start) && start > now) return false;
+    return true;
+  }).length;
+  const totalEmergency = settings.home.emergencyNotices.filter((n) => n.text.trim().length > 0).length;
 
   const tiles = [
     {
@@ -42,6 +56,12 @@ export default async function AdminDashboard() {
     { href: "/admin/products",  title: "Products",  count: products.length,  label: "products" },
     { href: "/admin/coverage",  title: "Coverage",  count: coverage.length,  label: "areas" },
     { href: "/admin/notices",   title: "Notices",   count: notices.length,   label: "notices" },
+    {
+      href: "/admin/emergency-notices",
+      title: "Emergency notice",
+      count: visibleEmergency,
+      label: totalEmergency > 0 ? `of ${totalEmergency} live now` : "none scheduled",
+    },
     {
       href: "/admin/settings",
       title: "Notification",

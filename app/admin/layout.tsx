@@ -13,6 +13,7 @@ const NAV = [
   { href: "/admin/products", label: "Products" },
   { href: "/admin/coverage", label: "Coverage areas" },
   { href: "/admin/notices", label: "Notice board" },
+  { href: "/admin/emergency-notices", label: "Emergency notice" },
   { href: "/admin/pages", label: "Page text" },
   { href: "/admin/settings", label: "Site settings" },
   { group: "Account" },

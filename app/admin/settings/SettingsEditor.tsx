@@ -303,9 +303,6 @@ function HomeSection({
     : legacyHero
       ? [legacyHero]
       : [{ title: "", subtitle: "", ctaLabel: "", ctaHref: "/packages" }];
-  const emergencyNotices = Array.isArray(value.emergencyNotices) && value.emergencyNotices.length > 0
-    ? value.emergencyNotices
-    : [{ text: "", link: "", enabled: true }];
 
   function updateSlide(index: number, patch: Partial<SettingsFile["home"]["heroSlides"][number]>) {
     onChange({
@@ -332,34 +329,6 @@ function HomeSection({
     onChange({
       ...value,
       heroSlides: [...heroSlides, { title: "", subtitle: "", ctaLabel: "", ctaHref: "/packages" }],
-    });
-  }
-
-  function updateEmergencyNotice(index: number, patch: Partial<SettingsFile["home"]["emergencyNotices"][number]>) {
-    onChange({
-      ...value,
-      emergencyNotices: emergencyNotices.map((notice, i) => (i === index ? { ...notice, ...patch } : notice)),
-    });
-  }
-
-  function moveEmergencyNotice(index: number, direction: -1 | 1) {
-    const target = index + direction;
-    if (target < 0 || target >= emergencyNotices.length) return;
-    const next = [...emergencyNotices];
-    const [moved] = next.splice(index, 1);
-    next.splice(target, 0, moved);
-    onChange({ ...value, emergencyNotices: next });
-  }
-
-  function removeEmergencyNotice(index: number) {
-    if (emergencyNotices.length <= 1) return;
-    onChange({ ...value, emergencyNotices: emergencyNotices.filter((_, i) => i !== index) });
-  }
-
-  function addEmergencyNotice() {
-    onChange({
-      ...value,
-      emergencyNotices: [...emergencyNotices, { text: "", link: "", enabled: true }],
     });
   }
 
@@ -417,59 +386,17 @@ function HomeSection({
       </button>
 
       <h3 style={{ marginTop: 24 }}>Emergency notice carousel</h3>
-      {emergencyNotices.map((notice, index) => (
-        <div key={index} className="admin-item">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
-            <strong>Notice {index + 1}</strong>
-            <div style={{ display: "flex", gap: 8 }}>
-              <button type="button" className="admin-btn admin-btn--ghost" onClick={() => moveEmergencyNotice(index, -1)} disabled={index === 0}>
-                ↑
-              </button>
-              <button
-                type="button"
-                className="admin-btn admin-btn--ghost"
-                onClick={() => moveEmergencyNotice(index, 1)}
-                disabled={index === emergencyNotices.length - 1}
-              >
-                ↓
-              </button>
-              <button
-                type="button"
-                className="admin-item__remove"
-                onClick={() => removeEmergencyNotice(index)}
-                disabled={emergencyNotices.length === 1}
-              >
-                Remove
-              </button>
-            </div>
-          </div>
-
-          <div className="admin-field">
-            <label>Text</label>
-            <textarea value={notice.text} onChange={(e) => updateEmergencyNotice(index, { text: e.target.value })} />
-          </div>
-
-          <div className="admin-field-row">
-            <div className="admin-field">
-              <label>Link (optional)</label>
-              <input type="text" value={notice.link} onChange={(e) => updateEmergencyNotice(index, { link: e.target.value })} />
-            </div>
-            <div className="admin-field" style={{ alignSelf: "end" }}>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={notice.enabled}
-                  onChange={(e) => updateEmergencyNotice(index, { enabled: e.target.checked })}
-                />{" "}
-                Enabled
-              </label>
-            </div>
+      <div className="admin-item" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
+        <div style={{ flex: 1, minWidth: 220 }}>
+          <strong>Manage the red top-of-page banner here.</strong>
+          <div style={{ color: "#4a5568", fontSize: 13, marginTop: 4 }}>
+            Add, remove, schedule, and toggle the emergency notice on its own page.
           </div>
         </div>
-      ))}
-      <button type="button" className="admin-btn admin-btn--ghost" onClick={addEmergencyNotice}>
-        + Add emergency notice
-      </button>
+        <a className="admin-btn admin-btn--primary" href="/admin/emergency-notices">
+          Open Emergency notice →
+        </a>
+      </div>
 
       <h3 style={{ marginTop: 24 }}>Notice board teaser</h3>
       <div className="admin-field">
