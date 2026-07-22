@@ -6,6 +6,13 @@ import type { HomePageSettings } from '@/lib/types';
 import ContactCallToAction from '@/components/ContactCallToAction';
 
 export default function HomePage({ home }: { home: HomePageSettings }) {
+  const legacyHero = (home as HomePageSettings & { hero?: HomePageSettings["heroSlides"][number] }).hero;
+  const heroSlides = Array.isArray(home.heroSlides) && home.heroSlides.length > 0
+    ? home.heroSlides
+    : legacyHero
+      ? [legacyHero]
+      : [{ title: "", subtitle: "", ctaLabel: "", ctaHref: "#" }];
+
   useEffect(() => {
     if (typeof window !== 'undefined' && window.$) {
       const $ = window.$;
@@ -40,20 +47,22 @@ export default function HomePage({ home }: { home: HomePageSettings }) {
 
       <section className="banner-wrapper jarallax" data-jarallax='{"speed": 0.3}' style={{ backgroundImage: `url(${getAssetPath('/assets/img/slider-img.jpg')})` }}>
         <div className="banner-slider owl-theme owl-carousel">
-          <div className="item">
-            <div className="banner-wrapper banner-area banner-area-four jarallax">
-              <div className="d-table">
-                <div className="d-table-cell">
-                  <div className="container">
-                    <div className="row align-items-center">
-                      <div className="col-lg-8">
-                        <div className="banner-content">
-                          <h1>{home.hero.title}</h1>
-                          <p>{home.hero.subtitle}</p>
-                          <div className="banner-btn">
-                            <a href={home.hero.ctaHref} className="default-btn">
-                              <span>{home.hero.ctaLabel}</span>
-                            </a>
+          {heroSlides.map((slide, index) => (
+            <div className="item" key={`${slide.title}-${index}`}>
+              <div className="banner-wrapper banner-area banner-area-four jarallax">
+                <div className="d-table">
+                  <div className="d-table-cell">
+                    <div className="container">
+                      <div className="row align-items-center">
+                        <div className="col-lg-8">
+                          <div className="banner-content">
+                            <h1>{slide.title}</h1>
+                            <p>{slide.subtitle}</p>
+                            <div className="banner-btn">
+                              <a href={slide.ctaHref} className="default-btn">
+                                <span>{slide.ctaLabel}</span>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -62,7 +71,7 @@ export default function HomePage({ home }: { home: HomePageSettings }) {
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 

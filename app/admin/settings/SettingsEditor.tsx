@@ -297,38 +297,93 @@ function HomeSection({
   value: SettingsFile["home"];
   onChange: (v: SettingsFile["home"]) => void;
 }) {
+  const legacyHero = (value as SettingsFile["home"] & { hero?: SettingsFile["home"]["heroSlides"][number] }).hero;
+  const heroSlides = Array.isArray(value.heroSlides) && value.heroSlides.length > 0
+    ? value.heroSlides
+    : legacyHero
+      ? [legacyHero]
+      : [{ title: "", subtitle: "", ctaLabel: "", ctaHref: "/packages" }];
+
+  function updateSlide(index: number, patch: Partial<SettingsFile["home"]["heroSlides"][number]>) {
+    onChange({
+      ...value,
+      heroSlides: heroSlides.map((slide, i) => (i === index ? { ...slide, ...patch } : slide)),
+    });
+  }
+
+  function moveSlide(index: number, direction: -1 | 1) {
+    const target = index + direction;
+    if (target < 0 || target >= heroSlides.length) return;
+    const next = [...heroSlides];
+    const [moved] = next.splice(index, 1);
+    next.splice(target, 0, moved);
+    onChange({ ...value, heroSlides: next });
+  }
+
+  function removeSlide(index: number) {
+    if (heroSlides.length <= 1) return;
+    onChange({ ...value, heroSlides: heroSlides.filter((_, i) => i !== index) });
+  }
+
+  function addSlide() {
+    onChange({
+      ...value,
+      heroSlides: [...heroSlides, { title: "", subtitle: "", ctaLabel: "", ctaHref: "/packages" }],
+    });
+  }
+
   return (
     <div>
-      <h3>Hero</h3>
-      <div className="admin-field">
-        <label>Title</label>
-        <input type="text" value={value.hero.title} onChange={(e) => onChange({ ...value, hero: { ...value.hero, title: e.target.value } })} />
-      </div>
-      <div className="admin-field">
-        <label>Subtitle</label>
-        <textarea
-          value={value.hero.subtitle}
-          onChange={(e) => onChange({ ...value, hero: { ...value.hero, subtitle: e.target.value } })}
-        />
-      </div>
-      <div className="admin-field-row">
-        <div className="admin-field">
-          <label>CTA label</label>
-          <input
-            type="text"
-            value={value.hero.ctaLabel}
-            onChange={(e) => onChange({ ...value, hero: { ...value.hero, ctaLabel: e.target.value } })}
-          />
+      <h3>Hero slides</h3>
+      {heroSlides.map((slide, index) => (
+        <div key={index} className="admin-item">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
+            <strong>Slide {index + 1}</strong>
+            <div style={{ display: "flex", gap: 8 }}>
+              <button type="button" className="admin-btn admin-btn--ghost" onClick={() => moveSlide(index, -1)} disabled={index === 0}>
+                ↑
+              </button>
+              <button
+                type="button"
+                className="admin-btn admin-btn--ghost"
+                onClick={() => moveSlide(index, 1)}
+                disabled={index === heroSlides.length - 1}
+              >
+                ↓
+              </button>
+              <button
+                type="button"
+                className="admin-item__remove"
+                onClick={() => removeSlide(index)}
+                disabled={heroSlides.length === 1}
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+          <div className="admin-field">
+            <label>Title</label>
+            <input type="text" value={slide.title} onChange={(e) => updateSlide(index, { title: e.target.value })} />
+          </div>
+          <div className="admin-field">
+            <label>Subtitle</label>
+            <textarea value={slide.subtitle} onChange={(e) => updateSlide(index, { subtitle: e.target.value })} />
+          </div>
+          <div className="admin-field-row">
+            <div className="admin-field">
+              <label>CTA label</label>
+              <input type="text" value={slide.ctaLabel} onChange={(e) => updateSlide(index, { ctaLabel: e.target.value })} />
+            </div>
+            <div className="admin-field">
+              <label>CTA URL</label>
+              <input type="text" value={slide.ctaHref} onChange={(e) => updateSlide(index, { ctaHref: e.target.value })} />
+            </div>
+          </div>
         </div>
-        <div className="admin-field">
-          <label>CTA URL</label>
-          <input
-            type="text"
-            value={value.hero.ctaHref}
-            onChange={(e) => onChange({ ...value, hero: { ...value.hero, ctaHref: e.target.value } })}
-          />
-        </div>
-      </div>
+      ))}
+      <button type="button" className="admin-btn admin-btn--ghost" onClick={addSlide}>
+        + Add slide
+      </button>
 
       <h3 style={{ marginTop: 24 }}>Notice board teaser</h3>
       <div className="admin-field">

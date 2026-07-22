@@ -100,12 +100,14 @@ export const settingsFileSchema = z.object({
   contact: contactSchema,
   notification: notificationSchema,
   home: z.object({
-    hero: z.object({
-      title: z.string(),
-      subtitle: z.string(),
-      ctaLabel: z.string(),
-      ctaHref: z.string(),
-    }),
+    heroSlides: z.array(
+      z.object({
+        title: z.string(),
+        subtitle: z.string(),
+        ctaLabel: z.string(),
+        ctaHref: z.string(),
+      }),
+    ),
     noticeboard: z.string(),
     stats: z.array(z.object({ label: z.string(), value: z.string() })),
     features: z.array(z.object({ icon: z.string(), title: z.string(), text: z.string() })),

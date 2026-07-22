@@ -92,12 +92,12 @@ export interface ContactSettings {
 }
 
 export interface HomePageSettings {
-  hero: {
+  heroSlides: {
     title: string;
     subtitle: string;
     ctaLabel: string;
     ctaHref: string;
-  };
+  }[];
   noticeboard: string;
   stats: { label: string; value: string }[];
   features: { icon: string; title: string; text: string }[];

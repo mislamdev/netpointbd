@@ -28,12 +28,26 @@
     "link": null
   },
   "home": {
-    "hero": {
-      "title": "Reliable Broadband Internet Connection in Bogura",
-      "subtitle": "Looking For Fast Reliable Broadband Internet Service in Bogura Without any interrupt? Net Point BD is the perfect solution for you. Great offer for Dedicated & Corporate Users.",
-      "ctaLabel": "See Packages",
-      "ctaHref": "/packages"
-    },
+    "heroSlides": [
+      {
+        "title": "Reliable Broadband Internet Connection in Bogura",
+        "subtitle": "Looking For Fast Reliable Broadband Internet Service in Bogura Without any interrupt? Net Point BD is the perfect solution for you. Great offer for Dedicated & Corporate Users.",
+        "ctaLabel": "See Packages",
+        "ctaHref": "/packages"
+      },
+      {
+        "title": "Uninterrupted Home Internet for Families",
+        "subtitle": "Enjoy smooth streaming, learning, gaming, and video calls with stable bandwidth and fast local support.",
+        "ctaLabel": "Home Internet",
+        "ctaHref": "/home-internet"
+      },
+      {
+        "title": "Dedicated Corporate Connectivity",
+        "subtitle": "Business-grade internet with guaranteed uptime, scalable bandwidth, and priority technical assistance.",
+        "ctaLabel": "Corporate Plans",
+        "ctaHref": "/corporate"
+      }
+    ],
     "noticeboard": "Stay updated with our latest news, announcements, and important updates.",
     "stats": [
       {
