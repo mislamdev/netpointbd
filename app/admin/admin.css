@@ -7,6 +7,10 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
 }
 
+body:has(.admin-shell) .header-area {
+  display: none;
+}
+
 .admin-shell__sidebar {
   background: #0f1c3a;
   color: #e3e9f5;

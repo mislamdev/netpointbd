@@ -1,10 +1,18 @@
 {
   "contact": {
     "phones": [
-      { "label": "WhatsApp", "number": "+8801923315047" },
-      { "label": "Support",  "number": "+8809638102102" }
+      {
+        "label": "WhatsApp",
+        "number": "+8801923315047"
+      },
+      {
+        "label": "Support",
+        "number": "+8809638 102 102"
+      }
     ],
-    "emails": ["info@netpoint.com.bd"],
+    "emails": [
+      "info@netpoint.com.bd"
+    ],
     "address": "Thanthania Opposite Bus-Stand, Bogura Sadar, Bogura-5800",
     "social": {
       "facebook": "https://www.facebook.com/netpointbdnet",
@@ -28,15 +36,39 @@
     },
     "noticeboard": "Stay updated with our latest news, announcements, and important updates.",
     "stats": [
-      { "label": "Network Setup", "value": "400" },
-      { "label": "Happy Client",  "value": "1000" },
-      { "label": "Expert Workers","value": "150" },
-      { "label": "Satisfactions", "value": "100" }
+      {
+        "label": "Network Setup",
+        "value": "400"
+      },
+      {
+        "label": "Happy Client",
+        "value": "1000"
+      },
+      {
+        "label": "Expert Workers",
+        "value": "150"
+      },
+      {
+        "label": "Satisfactions",
+        "value": "100"
+      }
     ],
     "features": [
-      { "icon": "flaticon-testing",        "title": "Equipment Installation and Setup",  "text": "Net Point BD delivers tremendous value and super-fast broadband to the node network via optical fiber. We also offer a firewall and security system." },
-      { "icon": "flaticon-authentication", "title": "Customer Satisfaction Guarantee",   "text": "The amount of our company's satisfied customers grows with every new client creating satisfaction guarantee for everyone who uses our services." },
-      { "icon": "flaticon-call",           "title": "24/7 Customer Support Centre",      "text": "We offer our clients with free 24/7/365 online and technical support that guarantees the solution of any issues with your Broadband connection." }
+      {
+        "icon": "flaticon-testing",
+        "title": "Equipment Installation and Setup",
+        "text": "Net Point BD delivers tremendous value and super-fast broadband to the node network via optical fiber. We also offer a firewall and security system."
+      },
+      {
+        "icon": "flaticon-authentication",
+        "title": "Customer Satisfaction Guarantee",
+        "text": "The amount of our company's satisfied customers grows with every new client creating satisfaction guarantee for everyone who uses our services."
+      },
+      {
+        "icon": "flaticon-call",
+        "title": "24/7 Customer Support Centre",
+        "text": "We offer our clients with free 24/7/365 online and technical support that guarantees the solution of any issues with your Broadband connection."
+      }
     ]
   },
   "about": {
