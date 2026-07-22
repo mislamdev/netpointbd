@@ -1,14 +1,44 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { getAssetPath } from '@/lib/utils';
-import type { ContactSettings } from '@/lib/types';
+'use client';
 
-export default function Header({ contact }: { contact: ContactSettings }) {
+import Link from 'next/link';
+import { getAssetPath } from '@/lib/utils';
+import type { ContactSettings, HomePageSettings } from '@/lib/types';
+
+export default function Header({ contact, home }: { contact: ContactSettings; home: HomePageSettings }) {
   const whatsapp = contact.phones.find((p) => /whatsapp/i.test(p.label))?.number ?? contact.phones[0]?.number ?? '';
   const support = contact.phones.find((p) => /support/i.test(p.label))?.number ?? contact.phones[1]?.number ?? '';
   const email = contact.emails[0] ?? '';
+  const emergencyNotices = Array.isArray(home.emergencyNotices)
+    ? home.emergencyNotices.filter((item) => item.enabled && item.text.trim().length > 0)
+    : [];
+
+  function renderNoticeItem(item: HomePageSettings["emergencyNotices"][number], index: number) {
+    return (
+      <div className="item" key={`${item.text}-${index}`}>
+        <div className="emergency-notice-slide">
+          <i className="bx bx-error-circle"></i>
+          {item.link ? (
+            <a href={item.link}>{item.text}</a>
+          ) : (
+            <span>{item.text}</span>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
+      {emergencyNotices.length > 0 && (
+        <div className="emergency-notice-area d-xl-none">
+          <div className="container">
+            <div className="emergency-notice-slider owl-theme owl-carousel">
+              {emergencyNotices.map((item, index) => renderNoticeItem(item, index))}
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="pay-online-button d-xl-none">
         <div className="container">
           <div className="row align-items-center">
@@ -74,6 +104,16 @@ export default function Header({ contact }: { contact: ContactSettings }) {
             </div>
           </div>
         </div>
+
+        {emergencyNotices.length > 0 && (
+          <div className="emergency-notice-area d-none d-xl-block">
+            <div className="container">
+              <div className="emergency-notice-slider owl-theme owl-carousel">
+                {emergencyNotices.map((item, index) => renderNoticeItem(item, index))}
+              </div>
+            </div>
+          </div>
+        )}
 
         <div className="navbar-area navbar-area-four">
           <div className="mobile-nav">
@@ -147,6 +187,40 @@ export default function Header({ contact }: { contact: ContactSettings }) {
           </div>
         </div>
       </header>
+
+      <style jsx>{`
+        .emergency-notice-area {
+          background: #ff4d4f;
+        }
+
+        .emergency-notice-slide {
+          color: #fff;
+          min-height: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 10px 16px;
+          font-size: 14px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        .emergency-notice-slide i {
+          font-size: 18px;
+          line-height: 1;
+          flex-shrink: 0;
+        }
+
+        .emergency-notice-slide a,
+        .emergency-notice-slide span {
+          color: #fff;
+        }
+
+        .emergency-notice-slide a:hover {
+          color: #ffe7c7;
+        }
+      `}</style>
     </>
   );
 }
