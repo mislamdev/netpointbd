@@ -14,6 +14,8 @@ export interface ServiceItem {
   name: string;
   url: string;
   image: string;
+  order?: number;
+  enabled?: boolean;
 }
 
 export interface ServiceSection {

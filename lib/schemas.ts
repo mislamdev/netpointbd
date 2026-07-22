@@ -9,6 +9,8 @@ export const serviceItemSchema = z.object({
   name: nonEmpty,
   url: z.string().url().or(z.literal("")).or(z.string().startsWith("/")),
   image: nonEmpty,
+  order: z.number().int().nonnegative().optional(),
+  enabled: z.boolean().optional(),
 });
 
 export const serviceSectionSchema = z.object({

@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { adminOrRedirect } from "@/lib/admin-guard";
 import { readJSON } from "@/lib/db";
 import { SERVICE_SLUGS, type ServicesFile } from "@/lib/types";
 import ServiceEditor from "./ServiceEditor";
+import BackToServicesButton from "./BackToServicesButton";
 
 export const dynamic = "force-dynamic";
 
@@ -18,9 +18,9 @@ export default async function AdminServiceEditPage({ params }: { params: Promise
 
   return (
     <div className="admin-card">
-      <p style={{ fontSize: 13, color: "#718096", margin: 0 }}>
-        <Link href="/admin/services">← All services</Link>
-      </p>
+      <div style={{ marginBottom: 8 }}>
+        <BackToServicesButton />
+      </div>
       <h2 style={{ marginTop: 8 }}>Edit “{section.pageTitle}”</h2>
       <ServiceEditor slug={slug} initial={section} />
     </div>

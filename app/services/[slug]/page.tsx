@@ -17,6 +17,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const data = await readJSON<ServicesFile>("services");
   const section = data[slug as keyof ServicesFile];
   if (!section) notFound();
+  const visibleItems = section.items
+    .filter((item) => item.enabled ?? true)
+    .sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
 
   return (
     <>
@@ -28,7 +31,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="services-area pt-100 pb-70">
         <div className="container">
           <div className="row justify-content-center">
-            {section.items.map((item) => (
+            {visibleItems.map((item) => (
               <div key={item.id} className="col-lg-3 col-md-4 col-sm-6">
                 <div className="single-services">
                   <div className="services-img">
