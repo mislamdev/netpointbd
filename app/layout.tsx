@@ -40,6 +40,7 @@ export default async function RootLayout({
         <link rel="stylesheet" href={`${basePath}/assets/css/nice-select.min.css`} />
         <link rel="stylesheet" href={`${basePath}/assets/css/odometer.min.css`} />
         <link rel="stylesheet" href={`${basePath}/assets/css/style.css`} />
+        <link rel="stylesheet" href={`${basePath}/assets/css/emergency-notice.css`} />
         <link rel="stylesheet" href={`${basePath}/assets/css/responsive.css`} />
         <title>NetPoint BD</title>
       </head>

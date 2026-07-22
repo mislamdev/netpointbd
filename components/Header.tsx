@@ -30,11 +30,13 @@ export default function Header({ contact, home }: { contact: ContactSettings; ho
     return (
       <div className="item" key={`${item.text}-${index}`}>
         <div className="emergency-notice-slide">
-          <i className="bx bx-error-circle"></i>
+          <span className="emergency-notice-icon" aria-hidden="true">
+            <i className="bx bx-error-circle"></i>
+          </span>
           {item.link ? (
             <a href={item.link}>{item.text}</a>
           ) : (
-            <span>{item.text}</span>
+            <span className="emergency-notice-text">{item.text}</span>
           )}
         </div>
       </div>
@@ -201,40 +203,6 @@ export default function Header({ contact, home }: { contact: ContactSettings; ho
           </div>
         </div>
       </header>
-
-      <style jsx>{`
-        .emergency-notice-area {
-          background: #ff4d4f;
-        }
-
-        .emergency-notice-slide {
-          color: #fff;
-          min-height: 44px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          padding: 10px 16px;
-          font-size: 14px;
-          font-weight: 600;
-          text-align: center;
-        }
-
-        .emergency-notice-slide i {
-          font-size: 18px;
-          line-height: 1;
-          flex-shrink: 0;
-        }
-
-        .emergency-notice-slide a,
-        .emergency-notice-slide span {
-          color: #fff;
-        }
-
-        .emergency-notice-slide a:hover {
-          color: #ffe7c7;
-        }
-      `}</style>
     </>
   );
 }
