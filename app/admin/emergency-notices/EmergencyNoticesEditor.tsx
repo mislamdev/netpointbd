@@ -76,11 +76,15 @@ export default function EmergencyNoticesEditor({
   );
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<{ kind: "ok" | "err"; text: string } | null>(null);
-  const [now, setNow] = useState(() => Date.now());
+  const [now, setNow] = useState(0);
 
   useEffect(() => {
     const id = setInterval(() => setNow(Date.now()), 30000);
-    return () => clearInterval(id);
+    const initial = setTimeout(() => setNow(Date.now()), 0);
+    return () => {
+      clearInterval(id);
+      clearTimeout(initial);
+    };
   }, []);
 
   function update(idx: number, patch: Partial<EmergencyNotice>) {
@@ -152,14 +156,14 @@ export default function EmergencyNoticesEditor({
       <div style={{ height: 12 }} />
 
       {items.map((notice, index) => {
-        const status = getNoticeStatus(notice, now);
+        const status = now > 0 ? getNoticeStatus(notice, now) : "active";
         return (
           <div key={index} className="admin-item">
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
                 <strong>Notice {index + 1}</strong>
                 <span
-                  title={`Now: ${new Date(now).toLocaleString()}`}
+                  title={now > 0 ? `Now: ${new Date(now).toLocaleString()}` : undefined}
                   style={{
                     fontSize: 11,
                     fontWeight: 600,
